@@ -1,0 +1,34 @@
+@font-face {
+    font-family: "Avenir";
+    font-weight: 100;
+    src: url("AvenirThin.eot");
+    src: url("AvenirThin.eot?#iefix") format("eot"), url("AvenirThin.woff2") format("woff2"), url("AvenirThin.woff") format("woff"), url("AvenirThin.ttf") format("truetype"), url("AvenirThin.svg#AvenirThin") format("svg");
+}
+
+@font-face {
+    font-family: "Avenir";
+    font-weight: normal;
+    src: url("AvenirRegular.eot");
+    src: url("AvenirRegular.eot?#iefix") format("eot"), url("AvenirRegular.woff2") format("woff2"), url("AvenirRegular.woff") format("woff"), url("AvenirRegular.ttf") format("truetype"), url("AvenirRegular.svg#AvenirRegular") format("svg");
+}
+
+@font-face {
+    font-family: "Avenir";
+    font-weight: 500;
+    src: url("AvenirMedium.eot");
+    src: url("AvenirMedium.eot?#iefix") format("eot"), url("AvenirMedium.woff2") format("woff2"), url("AvenirMedium.woff") format("woff"), url("AvenirMedium.ttf") format("truetype"), url("AvenirMedium.svg#AvenirMedium") format("svg");
+}
+
+@font-face {
+    font-family: "Avenir";
+    font-weight: 600;
+    src: url("AvenirDemi.eot");
+    src: url("AvenirDemi.eot?#iefix") format("eot"), url("AvenirDemi.woff2") format("woff2"), url("AvenirDemi.woff") format("woff"), url("AvenirDemi.ttf") format("truetype"), url("AvenirDemi.svg#AvenirDemi") format("svg");
+}
+
+@font-face {
+    font-family: "Avenir";
+    font-weight: 700;
+    src: url("AvenirNextBold.eot");
+    src: url("AvenirNextBold.eot?#iefix") format("eot"), url("AvenirNextBold.woff") format("woff"), url("AvenirNextBold.ttf") format("truetype"), url("AvenirNextBold.svg#AvenirNextBold") format("svg");
+}

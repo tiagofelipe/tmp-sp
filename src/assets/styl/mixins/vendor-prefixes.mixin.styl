@@ -1,0 +1,25 @@
+backface-visibility($visibility)
+  -webkit-backface-visibility $visibility
+  -moz-backface-visibility $visibility
+  backface-visibility $visibility
+
+// Placeholder text
+placeholder($color = $input-color-placeholder)
+  &::-moz-placeholder // Firefox
+    color $color
+    opacity 1 // Override Firefox's unusual default opacity; See https//github.com/twbs/bootstrap/pull/11526
+  &:-ms-input-placeholder // Internet Explorer 10+
+    color $color
+  &::-webkit-input-placeholder // Safari and Chrome
+    color $color
+
+perspective($perspective)
+  -webkit-perspective $perspective
+  // -moz-perspective $perspective
+  perspective $perspective
+
+transition-transform($transition)
+  -webkit-transition -webkit-transform $transition
+  -moz-transition -moz-transform $transition
+  -o-transition -o-transform $transition
+  transition transform $transition

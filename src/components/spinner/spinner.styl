@@ -1,0 +1,43 @@
+.u-spinner
+  vertical-align middle
+
+.u-spinner-anim
+  animation u-spin 2s linear infinite
+  transform-origin center center
+  .path
+    stroke-dasharray 1, 200
+    stroke-dashoffset 0
+    stroke-linecap round
+    animation u-dash 1.5s ease-in-out infinite
+
+@keyframes u-dash
+  0%
+    stroke-dasharray 1, 200
+    stroke-dashoffset 0
+  50%
+    stroke-dasharray 89, 200
+    stroke-dashoffset -35px
+  100%
+    stroke-dasharray 89, 200
+    stroke-dashoffset -124px
+
+@-webkit-keyframes u-spin {
+  0% {
+    -webkit-transform: rotate(0deg) /* rtl:ignore */;
+    transform: rotate(0deg) /* rtl:ignore */;
+  }
+  100% {
+    -webkit-transform: rotate(359deg) /* rtl:ignore */;
+    transform: rotate(359deg) /* rtl:ignore */;
+  }
+}
+@keyframes u-spin {
+  0% {
+    -webkit-transform: rotate(0deg) /* rtl:ignore */;
+    transform: rotate(0deg) /* rtl:ignore */;
+  }
+  100% {
+    -webkit-transform: rotate(359deg) /* rtl:ignore */;
+    transform: rotate(359deg) /* rtl:ignore */;
+  }
+}

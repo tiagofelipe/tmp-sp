@@ -1,0 +1,20 @@
+.u-option-inner
+  display inline-block
+  line-height 0
+
+  & + .u-option-label
+    margin-left $label-offset
+
+.u-option
+  vertical-align middle
+  input
+    display none !important
+  &.reverse .u-option-inner + .u-option-label
+    margin-right $label-offset
+    margin-left 0
+
+.u-option-group-inline-opts > div
+  display inline-flex
+.u-option-group
+  margin -5px
+  padding 5px 0

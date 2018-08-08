@@ -1,0 +1,158 @@
+.u-timeline
+  padding 0
+  width 100%
+  list-style none
+  h6
+    line-height inherit
+
+.u-timeline-title
+  margin-top 0
+  margin-bottom 16px
+
+.u-timeline-subtitle
+  font-size 12px
+  margin-bottom 8px
+  opacity .4
+  text-transform uppercase
+  letter-spacing 1px
+  font-weight 700
+
+.u-timeline-dot
+  position absolute
+  top 0
+  bottom 0
+  left 0
+  width 15px
+  &:before, &:after
+    content ''
+    background currentColor
+    display block
+    position absolute
+  &:before
+    border 3px solid transparent
+    border-radius 100%
+    height 15px
+    width 15px
+    top 4px
+    left 0
+    transition background .3s ease-in-out, border .3s ease-in-out
+  &:after
+    width 3px
+    opacity .4
+    top 24px
+    bottom 0
+    left 6px
+
+.u-timeline-entry-with-icon
+  .u-timeline-dot
+    width 31px
+    left -8px
+    &:before
+      height 31px
+      width 31px
+    &:after
+      top 41px
+      left 14px
+    .u-icon
+      position absolute
+      top 8px
+      left 4px
+      font-size 23px
+      color white
+      transition color .3s ease-in-out
+  .u-timeline-subtitle
+    padding-top 8px
+
+.u-timeline-dark
+  color white
+  .u-timeline-subtitle
+    opacity .7
+
+.u-timeline-entry
+  padding-left 40px
+  position relative
+  line-height 22px
+  &:last-child
+    padding-bottom 0
+    .u-timeline-dot:after
+      content none
+  &:hover
+    .u-timeline-dot:before
+      background transparent
+      border 3px solid currentColor
+  &.u-timeline-entry-with-icon:hover .u-timeline-dot .u-icon
+    color currentColor
+
+.u-timeline-content
+  padding-bottom 24px
+
+.u-timeline-heading
+  position relative
+  &:first-child .u-timeline-heading-title
+    padding-top 0
+  &:last-child .u-timeline-heading-title
+    padding-bottom 0
+.u-timeline-heading-title
+  padding 32px 0
+  margin 0
+
+@media (min-width $breakpoint-md-min) and (max-width $breakpoint-md-max)
+  .u-timeline-heading
+    display table-row
+    font-size 200%
+    > div
+      display table-cell
+  .u-timeline-heading-title
+    margin-left -50px
+  .u-timeline
+    display table
+  .u-timeline-entry
+    display table-row
+    padding 0
+  .u-timeline-subtitle, .u-timeline-dot, .u-timeline-content
+    display table-cell
+    vertical-align top
+  .u-timeline-subtitle
+    text-align right
+    width 35%
+  .u-timeline-dot
+    position relative
+  .u-timeline-content
+    padding-left 30px
+  .u-timeline-entry-with-icon .u-timeline-content
+    padding-top 8px
+  .u-timeline-subtitle
+    padding-right 30px
+
+@media (min-width $breakpoint-lg-min)
+  .u-timeline-heading-title
+    text-align center
+    margin-left 0
+  .u-timeline-entry, .u-timeline-subtitle, .u-timeline-dot, .u-timeline-content
+    display block
+    margin 0
+    padding 0
+  .u-timeline-dot
+    position absolute
+    left 50%
+    margin-left -7.15px
+  .u-timeline-entry-with-icon .u-timeline-dot
+    left 50%
+    margin-left -15px
+  .u-timeline-subtitle, .u-timeline-content
+    width 50%
+  .u-timeline-entry-left .u-timeline-content,
+  .u-timeline-entry-right .u-timeline-subtitle
+    float left
+    padding-right 30px
+    text-align right
+  .u-timeline-entry-left .u-timeline-subtitle,
+  .u-timeline-entry-right .u-timeline-content
+    float right
+    text-align left
+    padding-left 30px
+  .u-timeline-entry-with-icon .u-timeline-content
+    padding-top 8px
+  .u-timeline-entry
+    padding-bottom 24px
+    overflow hidden

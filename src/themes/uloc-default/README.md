@@ -1,0 +1,1 @@
+Este componente é para fornecer um padrão de componentes para reutilização.

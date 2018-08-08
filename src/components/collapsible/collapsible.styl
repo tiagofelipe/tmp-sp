@@ -1,0 +1,39 @@
+.u-collapsible-sub-item
+  padding $collapsible-padding
+  &.indent
+    padding-left $collapsible-menu-left-padding
+    padding-right 0
+
+  .u-card
+    margin-bottom 0
+
+.u-collapsible.{$router-link-active} > .u-item
+  background $collapsible-active-color
+
+.u-collapsible
+  transition padding .5s
+
+.u-collapsible-closed
+  padding 0 15px
+  .u-collapsible-inner
+    border 1px solid $item-separator-color
+  & + &
+    .u-collapsible-inner
+      border-top 0
+
+.u-collapsible-opened
+  padding 15px 0
+  .u-collapsible-inner
+    box-shadow $shadow-2
+  & + &, &:first-child
+    padding-top 0
+  &:last-child
+    padding-bottom 0
+
+.u-collapsible-cursor-pointer > .u-collapsible-inner > .u-item
+  cursor pointer
+
+.u-collapsible-toggle-icon
+  border-radius 50%
+  width 1em
+  text-align center

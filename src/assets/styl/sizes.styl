@@ -1,0 +1,66 @@
+:root
+  for $name, $size in $sizes
+    --u-size-{$name} $size
+
+.fit
+  width 100% !important
+  height 100% !important
+.full-height
+  height 100% !important
+.full-width
+  width 100% !important
+  margin-left 0 !important
+  margin-right 0 !important
+
+.window-height
+  margin-top 0 !important
+  margin-bottom 0 !important
+  height 100vh !important
+.window-width
+  margin-left 0 !important
+  margin-right 0 !important
+  width 100vw !important
+
+.block
+  display block !important
+.inline-block
+  display inline-block !important
+
+for $space, $value in $spaces
+
+  .u-pa-{$space}
+    padding: $value.y $value.x
+  .u-pl-{$space}
+    padding-left: $value.x
+  .u-pr-{$space}
+    padding-right: $value.x
+  .u-pt-{$space}
+    padding-top: $value.y
+  .u-pb-{$space}
+    padding-bottom: $value.y
+  .u-px-{$space}
+    @extends .u-pl-{$space}, .u-pr-{$space}
+  .u-py-{$space}
+    @extends .u-pt-{$space}, .u-pb-{$space}
+
+  .u-ma-{$space}
+    margin: $value.y $value.x
+  .u-ml-{$space}
+    margin-left: $value.x
+  .u-mr-{$space}
+    margin-right: $value.x
+  .u-mt-{$space}
+    margin-top: $value.y
+  .u-mb-{$space}
+    margin-bottom: $value.y
+  .u-mx-{$space}
+    @extends .u-ml-{$space}, .u-mr-{$space}
+  .u-my-{$space}
+    @extends .u-mt-{$space}, .u-mb-{$space}
+
+.u-ml-auto
+  margin-left auto
+.u-mr-auto
+  margin-right auto
+.u-mx-auto
+  @extends .u-ml-auto, .u-mr-auto

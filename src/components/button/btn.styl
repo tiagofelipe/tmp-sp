@@ -1,0 +1,122 @@
+.u-btn
+  outline 0
+  border 0
+  vertical-align middle
+  cursor pointer
+  -webkit-appearance button
+  padding $button-padding
+  font-size $button-font-size
+  text-decoration none
+  color inherit
+  background transparent
+  transition $button-transition
+  min-height 2.572em
+  -box-shadow(0 1px 1px rgba(90, 90, 90, 0.1))
+  font-weight $button-font-weight
+  text-transform uppercase
+  .u-icon, .u-spinner
+    font-size 1.4em
+  // workaround for alignment/sizing change when showing loader
+  .u-btn-inner:before
+    content ''
+
+  &.disabled
+    opacity .7 !important
+
+  &:not(.disabled):not(.u-btn-flat):not(.u-btn-outline):not(.u-btn-push)
+    &:before
+      // This places the button active raise shadow behind adjacent elements
+      // Active raise shadow will still be visible under adjacent transparent elements, this is ok and coherent with a desired transparency effect.
+      // Visible active raise shadow can be removed by specifying a background color to the button
+      // Visible active raise shadow can be removed by specifying a flat or outline button type
+      content ''
+      position absolute
+      top 0
+      right 0
+      bottom 0
+      left 0
+      border-radius inherit
+      z-index -1
+      transition $button-transition
+    &:active
+      outline 0
+      background-image none
+      box-shadow inset 0 5px 10px rgba(0, 0, 0, .190) // as
+    &:active:before
+      box-shadow $shadow-2
+
+.u-btn-progress
+  transition all .3s
+  height 100%
+  background rgba(255, 255, 255, .25)
+  &.u-btn-dark-progress
+    background rgba(0, 0, 0, .2)
+
+.u-btn-no-uppercase
+  text-transform none
+
+.u-btn-rectangle
+  border-radius $btn-border-radius
+
+.u-btn-flat, .u-btn-outline
+  box-shadow none
+  &:active:not(.disabled)
+    outline 0
+    background-image none
+    box-shadow inset 0 5px 10px rgba(0, 0, 0, .190)
+
+.u-btn-outline
+  border 1px solid currentColor
+  background transparent !important
+
+.u-btn-push
+  border-radius $button-push-border-radius
+  border-bottom 3px solid rgba(0, 0, 0, .15)
+  &:active:not(.disabled)
+    box-shadow none
+    transform translateY(3px)
+    border-bottom-color transparent
+  .u-focus-helper, .u-ripple-container
+    height auto
+    bottom -3px
+
+.u-btn-rounded
+  border-radius $button-rounded-border-radius
+
+.u-btn-round
+  border-radius 50%
+  padding 0
+  min-height 0
+  height 3em
+  width 3em
+  &:not(.u-btn-flat):not(.u-btn-outline)
+    box-shadow $button-shadow
+
+.u-btn-dense
+  padding .285em
+  min-height 2em
+  &.u-btn-round
+    padding 0
+    height 2.4em
+    width 2.4em
+  .on-left
+    margin-right 6px
+  .on-right
+    margin-left 6px
+
+.u-btn-fab, .u-btn-fab-mini
+  .u-icon
+    font-size 24px
+.u-btn-fab
+  height 56px
+  width 56px
+.u-btn-fab-mini
+  height 40px
+  width 40px
+
+.u-btn-block
+  display block !important
+
+/*.u-btn.bg-white .u-focus-helper{
+  display none !important
+}*/

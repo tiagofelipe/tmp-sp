@@ -1,0 +1,150 @@
+.u-if, .u-if:before, .u-if:after, .u-if-label, .u-if-addon, .u-field-icon, .u-field-label, .u-if-control, .u-field-bottom
+  transition $input-frame-transition
+
+.u-if
+  min-height 32px
+  outline 0
+  padding-bottom 8px
+
+  &:not(.u-if-hide-underline):not(.u-if-inverted)
+    &:before, &:after
+      content ''
+  &:before, &:after
+    position absolute
+    bottom 0
+    left 0
+    right 0
+    background currentColor
+  &:before
+    height 1px
+    color $light
+    color var(--u-color-light)
+    transform scaleY(1)
+  &:after
+    width 0
+    height 2px
+    color currentColor
+
+  &:hover:before
+    color black
+
+  .group
+    margin -5px
+    &:not(:first-child)
+      margin-top 0
+
+.u-if-hide-underline:not(.u-if-inverted)
+  min-height 24px
+  padding-bottom 0
+
+.u-if-focusable
+  outline 0
+  cursor pointer
+
+.u-if-inner
+  min-height 24px !important
+  align-items center
+
+.u-if-has-label
+  min-height 41px
+  .u-if-inner
+    min-height 36px !important
+    padding-top 12px
+
+.u-if-label
+  pointer-events none
+  user-select none
+  top 15px
+  left 0
+  right 0
+  transform-origin left top 0
+  transform scale(1) translate(0, 0)
+.u-if-label-above
+  transform scale(.75) translate(0, -22px)
+
+.u-if-addon
+  pointer-events none
+  opacity 0
+.u-if-addon-left
+  padding-right 4px
+.u-if-addon-right
+  padding-left 1px
+.u-if-addon-visible
+  opacity 1
+
+.u-if-control
+  cursor pointer
+  font-size 24px
+  width 24px
+  align-self flex-end
+  &.u-icon
+    cursor pointer
+  &:hover
+    opacity .7
+.u-if-control-before
+  margin-left 0
+  margin-right 4px
+
+.u-if-label, .u-if-addon, .u-if-control
+  color $form-dark
+
+.u-if-inverted
+  min-height 38px
+  border-radius 2px
+  padding 8px
+  box-shadow $shadow-1
+
+  .u-input-target
+    color inherit
+  .u-if-label, .u-if-addon,  .u-if-control
+    color #ddd
+
+div.u-input-target
+  min-width 35px
+
+.u-if-dark
+  &:hover:before
+    color white
+  &:not(.u-if-inverted-light)
+    .u-input-target
+      color white
+
+.u-if-inverted-light
+  .u-if-label, .u-if-addon,  .u-if-control
+    color #656565
+
+.u-if-focused
+  &:after
+    width 100%
+  .u-if-label, .u-if-addon, .u-if-control
+    color currentColor !important
+
+.u-if-error
+  &:before, &:after, &:not(.u-if-inverted) .u-if-label
+    color $negative
+    color var(--u-color-negative)
+  &:hover:before
+    color lighten($negative, 46%)
+    color var(--u-color-negative-l)
+
+.u-if-warning
+  &:before, &:after, &:not(.u-if-inverted) .u-if-label
+    color $warning
+    color var(--u-color-warning)
+  &:hover:before
+    color lighten($warning, 46%)
+    color var(--u-color-warning-l)
+
+.u-if-disabled
+  cursor not-allowed !important
+  .u-if-label, .u-if-control, .u-input-target, .u-chip
+    opacity .6
+    cursor not-allowed !important
+  &:before
+    background-image linear-gradient(90deg, rgba(0, 0, 0, .38) 0, rgba(0, 0, 0, .38) 33%, transparent 0)
+    background-color transparent
+    background-position bottom
+    background-size 3px 1px
+    background-repeat repeat-x
+  &.u-if-dark:before
+    background-image linear-gradient(90deg, rgba(255, 255, 255, .7) 0, rgba(255, 255, 255, .7) 33%, transparent 0)

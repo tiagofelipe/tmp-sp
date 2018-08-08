@@ -1,0 +1,77 @@
+.u-field-icon
+  width $field-icon-size
+  height $field-icon-size
+  min-width $field-icon-size
+  font-size $field-icon-size
+  margin-right 16px
+  color $field-label-color
+
+.u-field-label
+  padding-right 8px
+  color $field-label-color
+.u-field-label-inner
+  min-height $field-icon-size
+.u-field-label-hint
+  padding-left 8px
+
+.u-field-bottom
+  font-size 12px
+  padding-top 8px
+  color $form-dark
+.u-field-no-input
+  margin-top 8px
+  border-top 1px solid rgba(0, 0, 0, .12)
+.u-field-counter
+  color $field-label-color
+  padding-left 8px
+
+.u-field-dark
+  .u-field-label, .u-field-icon, .u-field-counter, .u-field-bottom
+    color $form-light
+  .u-field-no-input
+    border-top 1px solid $field-label-color
+
+.u-field-with-error
+  .u-field-icon, .u-field-label, .u-field-bottom
+    color $negative
+    color var(--u-color-negative)
+  .u-field-no-input
+    border-top 1px solid $negative
+    border-top 1px solid var(--u-color-negative)
+
+.u-field-with-warning
+  .u-field-icon, .u-field-label, .u-field-bottom
+    color $warning
+    color var(--u-color-warning)
+  .u-field-no-input
+    border-top 1px solid $warning
+    border-top 1px solid var(--u-color-warning)
+
+ufield-vertical()
+  .u-field-label + .u-field-content
+    padding-top 8px
+  &.u-field-floating.u-field-no-label
+    .u-field-margin
+      margin-top 12px
+  &.u-field-no-label .u-field-label
+    display none
+
+ufield-horizontal()
+  &.u-field-floating
+    .u-field-margin
+      margin-top 12px
+  .u-field-label + .u-field-content
+    padding-top 0
+
+.u-field-vertical
+  ufield-vertical()
+.u-field-horizontal
+  ufield-horizontal()
+
+@media (max-width $breakpoint-xs-max)
+  .u-field-responsive
+    ufield-vertical()
+
+@media (min-width $breakpoint-sm-min)
+  .u-field-responsive
+    ufield-horizontal()

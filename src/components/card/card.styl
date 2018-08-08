@@ -1,0 +1,71 @@
+.u-card
+  border-radius $generic-border-radius
+  box-shadow $card-shadow
+  vertical-align top
+
+  > div:first-child
+    border-top-left-radius inherit
+    border-top-right-radius inherit
+  > div:last-child
+    border-bottom-left-radius inherit
+    border-bottom-right-radius inherit
+
+  > .u-list
+    border 0
+
+.u-card-separator
+  background $card-separator-color
+  height 1px
+  &.inset
+    margin 0 16px
+
+.u-card-container
+  padding 16px
+
+.u-card-title
+  font-size 18px
+  font-weight 400
+  letter-spacing normal
+  line-height 2rem
+  &:empty
+    display none
+.u-card-subtitle, .u-card-title-extra
+  font-size 14px
+  color $card-faded-color
+  .u-icon
+    font-size 24px
+
+.u-card-main
+  font-size 14px
+.u-card-primary + .u-card-main
+  padding-top 0
+
+.u-card-actions
+  padding 8px
+  .u-btn
+    padding 0 8px
+.u-card-actions-horiz
+  .u-btn + .u-btn
+    margin-left 8px
+.u-card-actions-vert
+  .u-btn + .u-btn
+    margin-top 4px
+
+.u-card-media
+  overflow hidden
+  > img
+    display block
+    width 100%
+    max-width 100%
+    border 0
+.u-card-media-overlay
+  color white
+  background $card-overlay-color
+  .u-card-subtitle
+    color white
+
+.u-card-dark
+  .u-card-separator
+    background $card-dark-separator-color
+  .u-card-subtitle, .u-card-title-extra
+    color $card-dark-faded-color

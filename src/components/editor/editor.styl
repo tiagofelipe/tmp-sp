@@ -1,0 +1,46 @@
+.u-editor
+  border $editor-border
+  &.disabled
+    border-style dashed
+  &.fullscreen
+    border 0 !important
+
+.u-editor-content
+  outline 0
+  padding $editor-content-padding
+  min-height $editor-content-min-height
+  background white
+
+  hr
+    border 0
+    outline 0
+    margin 1px
+    height 1px
+    background $editor-hr-color
+
+.u-editor-toolbar-padding
+  padding $editor-toolbar-padding
+
+.u-editor-toolbar
+  border-bottom $editor-border
+  background $grey-4
+  min-height 37px
+  .u-btn-group
+    box-shadow none
+  .u-btn-group + .u-btn-group
+    margin-left $editor-button-gutter
+.u-editor-toolbar-separator
+  .u-btn-group + .u-btn-group
+    padding-left $editor-button-gutter
+    &:before
+      content ''
+      position absolute
+      left 0
+      top 0
+      bottom 0
+      height 100%
+      width 1px
+      background $editor-border-color
+
+.u-editor-input input
+  color inherit

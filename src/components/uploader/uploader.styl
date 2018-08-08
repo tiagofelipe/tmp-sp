@@ -1,0 +1,50 @@
+.u-uploader-expanded .u-if
+  border-bottom-left-radius 0
+  border-bottom-right-radius 0
+
+.u-uploader-input
+  opacity 0
+  max-width 100%
+  height 100%
+  width 100%
+  font-size 0
+.u-uploader-pick-button[disabled] .u-uploader-input
+  display none
+
+.u-uploader-files
+  border 1px solid $grey-4
+  font-size 14px
+  max-height 500px
+.u-uploader-files-no-border .u-uploader-files
+  border-top 0 !important
+.u-uploader-file:not(:last-child)
+  border-bottom 1px solid $grey-4
+.u-uploader-progress-bg, .u-uploader-progress-text
+  pointer-events none
+.u-uploader-progress-bg
+  height 100%
+  opacity .2
+.u-uploader-progress-text
+  font-size 40px
+  opacity .1
+  right 44px
+  bottom 0
+
+.u-uploader-dnd
+  outline 2px dashed currentColor
+  outline-offset -6px
+  background rgba(255, 255, 255, .6)
+  &.inverted
+    background rgba(0, 0, 0, .3)
+
+.u-uploader-dark
+  .u-uploader-files
+    color white
+    border 1px solid $field-dark-label-color
+  .u-uploader-bg
+    color white
+  .u-uploader-progress-text
+    opacity .2
+  .u-uploader-file:not(:last-child)
+    border-bottom 1px solid $dark
+    border-bottom 1px solid var(--u-color-dark)

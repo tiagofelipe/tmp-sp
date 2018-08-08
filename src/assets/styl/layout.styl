@@ -1,0 +1,479 @@
+/* ULAYOUT */
+*
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+
+*:after, *:before
+  box-sizing: border-box
+
+*:focus
+  outline: none
+
+html, body
+  font-size 13px
+  height: 100%
+
+body
+  font-family: $font-family-base
+  font-weight: normal
+  color: #0c0c0c // #293e52
+  background: #ecf1f8
+  overflow: hidden
+  font-size 100%
+  line-height: 1
+
+body a
+  font-family: $font-family-base
+  font-weight: 300
+  color: #0081ff
+  text-decoration: none
+
+body a:hover
+  cursor: pointer
+
+body a:focus
+  outline: none
+
+body p
+  // color: #192c3d
+  font-size: $font-size-base
+  line-height: 1.4
+  font-weight normal
+
+body img
+  -webkit-transform: translateZ(0) translate3D(0, 0, 0)
+  transform: translateZ(0) translate3D(0, 0, 0)
+  -webkit-backface-visibility: hidden
+  backface-visibility: hidden
+
+body h1, body h2, body h3, body h4, body h5, body h6
+  font-weight: 500
+
+body h1 .u-collapse h1, body h1 .u-collapse h2, body h1 .u-collapse h3, body h1 .u-collapse h4, body h1 .u-collapse h5, body h1 .u-collapse h6, body h1 header h1, body h1 header h2, body h1 header h3, body h1 header h4, body h1 header h5, body h1 header h6, body h2 .u-collapse h1, body h2 .u-collapse h2, body h2 .u-collapse h3, body h2 .u-collapse h4, body h2 .u-collapse h5, body h2 .u-collapse h6, body h2 header h1, body h2 header h2, body h2 header h3, body h2 header h4, body h2 header h5, body h2 header h6, body h3 .u-collapse h1, body h3 .u-collapse h2, body h3 .u-collapse h3, body h3 .u-collapse h4, body h3 .u-collapse h5, body h3 .u-collapse h6, body h3 header h1, body h3 header h2, body h3 header h3, body h3 header h4, body h3 header h5, body h3 header h6, body h4 .u-collapse h1, body h4 .u-collapse h2, body h4 .u-collapse h3, body h4 .u-collapse h4, body h4 .u-collapse h5, body h4 .u-collapse h6, body h4 header h1, body h4 header h2, body h4 header h3, body h4 header h4, body h4 header h5, body h4 header h6, body h5 .u-collapse h1, body h5 .u-collapse h2, body h5 .u-collapse h3, body h5 .u-collapse h4, body h5 .u-collapse h5, body h5 .u-collapse h6, body h5 header h1, body h5 header h2, body h5 header h3, body h5 header h4, body h5 header h5, body h5 header h6, body h6 .u-collapse h1, body h6 .u-collapse h2, body h6 .u-collapse h3, body h6 .u-collapse h4, body h6 .u-collapse h5, body h6 .u-collapse h6, body h6 header h1, body h6 header h2, body h6 header h3, body h6 header h4, body h6 header h5, body h6 header h6
+  font-weight: normal !important
+
+ul li
+  list-style: none
+
+a, a:hover
+  text-decoration: none
+
+p a:hover, p a:focus
+  border-bottom-color: transparent
+
+img
+  max-width: 100%
+
+fieldset
+  border: none
+
+main
+  display: block
+
+[hidden], template
+  display: none
+
+small
+  font-size: 12px
+
+button::-moz-focus-inner, input::-moz-focus-inner
+  border: 0
+  padding: 0
+
+::-webkit-scrollbar
+  width: 8px
+  height: 8px
+
+::-webkit-scrollbar-button
+  width: 0
+  height: 0
+
+::-webkit-scrollbar-thumb
+  background: #c0d0e6
+  border: 8px none #fff
+  border-radius: 10px
+
+::-webkit-scrollbar-thumb:hover
+  background: #9aaabe
+
+::-webkit-scrollbar-thumb:active
+  background: #9aaabe
+
+::-webkit-scrollbar-track
+  background: #e6ecf5
+  border: 9px none #fff
+  border-radius: 10px
+  margin: 6px 0
+
+::-webkit-scrollbar-track:hover
+  background: #e6ecf5
+
+::-webkit-scrollbar-track:active
+  background: #e6ecf5
+
+::-webkit-scrollbar-corner
+  background: transparent
+
+h1, .h1 { font-size: $font-size-h1; }
+h2, .h2 { font-size: $font-size-h2; }
+h3, .h3 { font-size: $font-size-h3; }
+h4, .h4 { font-size: $font-size-h4; }
+h5, .h5 { font-size: $font-size-h5; }
+h6, .h6 { font-size: $font-size-h6; }
+
+.u-main
+  width: 100%
+  overflow: auto
+  height: 100%
+  padding: 0 30px
+  position: relative
+  calc_size = $header-menu-height + $header-nav-height
+  height: "calc(100% - %s)" % (calc_size)
+
+  &.u-no-nav{
+    calc_size = $header-menu-height
+    height: "calc(100% - %s)" % (calc_size)
+  }
+.u-flex
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+
+.u-main-content
+  &.content-flex
+    display: -webkit-box
+    display: -ms-flexbox
+    display: flex
+    -ms-flex-flow: wrap
+    flex-flow: wrap
+    -webkit-box-flex: 1
+    -ms-flex: 1
+    flex: 1
+    -ms-flex-line-pack: start
+    align-content: flex-start
+    height: 100%
+    overflow: overlay
+    padding: 0 40px 50px 50px
+    overflow-x: hidden
+
+/**
+  Header
+ */
+.u-header
+  margin-top: 0
+  transition: all 0.5s
+  position: relative
+  z-index: $zindex-navbar
+
+/* .theme-default
+  transition: all 1.2s ease */
+
+/* TODO: Verificar necessidade disto */
+
+.theme-default .u-header
+  background-color: #0081ff
+
+/*background-color: #0081ff; //005AFF
+background-image: -webkit-radial-gradient(50% top, circle, rgba(3,25,255,0.6) 0%, rgba(3,25,255,0) 75%),-webkit-radial-gradient(right top, circle, #005AFF 0%, rgba(3,25,255,0) 57%);
+background-image: radial-gradient(50% top, circle, rgba(3,25,255,0.6) 0%, rgba(3,25,255,0) 75%),radial-gradient(right top, circle, #794aa2 0%, rgba(121,74,162,0) 57%);
+background-repeat: no-repeat;
+background-size: 100% 1000px;*/
+
+.u-header .u-top-header
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
+  align-items: center
+  height: 56px
+  padding: 0 20px
+  position: relative
+
+.u-header .u-left-side
+  position: absolute
+  top: 0
+  z-index: 5
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
+  align-items: center
+  height: 56px
+
+.u-header .u-left-side .u-app-name
+  margin-left: 26px
+  color: #fff
+  font: 18px $font-family-base
+
+.drawer-fixed{
+  .no-m-drawer-fixed{
+    margin-left 0 !important
+  }
+}
+.u-header .u-left-side .ico-menu
+  font-size: 20px
+  transition: all 0.3s
+  padding: 4px
+  border-radius: 50%
+  margin-left: 4px
+
+.theme-default .u-header .u-left-side .ico-menu
+  color: #fff
+
+.u-header .u-left-side :hover.ico-menu
+  background-color: rgba(255, 255, 255, 0.2)
+
+.u-header .u-header-right-side
+  position: absolute
+  right: 45px
+  top: 0
+  z-index: 5
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
+  align-items: center
+  height: 56px
+
+.u-header .u-top-header a.u-active
+  position: relative
+
+a.u-active, a:hover
+  color: #0154a5
+
+.u-header-actions
+  font-size: 14px
+  margin-left: 12px
+
+.u-header-actions:before, .u-header-actions:after
+  font-size: 20px
+  font-weight: normal
+
+.theme-default .u-header-actions
+  color: rgba(255, 255, 255, 0.6)
+  font-size 24px
+  display flex
+
+.theme-default .u-header-actions:hover,
+.theme-default .u-header-actions:hover
+  color: #fff
+
+.u-header .u-header-right-side .u-user-photo
+  position: relative
+  margin-left: 10px
+
+.u-header .u-header-right-side .u-user-photo:after
+  position: absolute
+  font: 15px "Font Awesome 5 Pro"
+  content: "\f142"
+  font-weight 900
+  top: 0
+  bottom: 0
+  right: -12px
+  left: 0
+  text-align: right
+  padding-top: 10px
+
+.theme-default .u-header .u-header-right-side .u-user-photo:after
+  color: rgba(255, 255, 255, 0.8)
+
+.theme-default .u-header .u-header-right-side .u-user-photo:hover:after
+  color: #fff
+
+.u-avatar
+  height: 32px
+  width: 32px
+
+.u-round
+  border-radius: 5px !important
+
+.u-header .u-nav
+  position: relative
+  box-shadow: inset 0 0 172px rgba(0, 0, 0, 0.1)
+  height: 50px
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
+  align-items: center
+  -webkit-box-pack: justify
+  -ms-flex-pack: justify
+  justify-content: space-between
+  padding: 0 20px 0 72px
+
+.u-header .u-nav .u-back
+  position: absolute
+  opacity: 0.5
+  left: 10px
+  cursor: pointer
+  top: 0
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  -webkit-box-pack: center
+  -ms-flex-pack: center
+  justify-content: center
+  -webkit-box-align: center
+  -ms-flex-align: center
+  align-items: center
+  height: 50px
+  width: 60px
+
+.theme-default .u-header .u-nav .u-back
+  color: #fff
+
+.u-header .u-nav ul
+  -webkit-box-flex: 1
+  -ms-flex: 1
+  flex: 1
+  height: 50px
+
+.u-header .u-nav ul.u-nav-header li
+  float: left
+  margin-left: 2px
+
+.u-header .u-nav ul.u-nav-header a
+  padding: 19px 10px 12px 10px
+  font: 14px $font-family-base
+  font-weight: 500
+  opacity: 0.5
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+
+.theme-default .u-header .u-nav ul.u-nav-header a
+  color: #fff
+
+.u-header .u-nav ul.u-nav-header a.u-active, .u-header .u-nav ul.u-nav-header a:hover
+  opacity: 1
+
+.theme-default .u-header .u-nav ul.u-nav-header a.u-active,
+.theme-default .u-header .u-nav ul.u-nav-header a:hover
+  border-bottom: 3px solid rgba(255, 255, 255, 0.5)
+
+.u-header .u-nav .u-i-actions
+  display: flex;
+  align-items: center;
+.u-header .u-nav .u-i-actions .u-btn-outline
+  display: -webkit-inline-box !important
+  display: -ms-inline-flexbox !important
+  display: inline-flex !important
+  -webkit-box-pack: center
+  -ms-flex-pack: center
+  justify-content: center
+  -webkit-box-align: center
+  -ms-flex-align: center
+  align-items: center
+  border: 0 !important
+  font: 14px $font-family-base
+  font-weight: 500
+  margin-right: 10px
+  min-height: 32px
+  padding: 5px 10px 6px 10px
+  position: relative
+
+.theme-default .u-header .u-nav .u-i-actions .u-btn-outline
+  background: rgba(255, 255, 255, 0.1) !important
+  color: #fff
+
+.u-single-badge
+  border-radius: 2px
+  font-size: 10px
+  padding: 4px
+  display: -webkit-inline-box !important
+  display: -ms-inline-flexbox !important
+  display: inline-flex !important
+  -webkit-box-pack: center
+  -ms-flex-pack: center
+  justify-content: center
+  -webkit-box-align: center
+  -ms-flex-align: center
+  align-items: center
+  min-width: 20px
+  height: 16px
+  font-weight: normal
+  margin-right: 5px
+
+.theme-default .u-single-badge
+  background: rgba(255, 255, 255, 0.1)
+  color: #fff
+
+.u-improvements .u-ico-improvements
+  position: relative
+  top: -2px
+  right: -3px
+
+.u-header .u-nav .u-i-actions [class*="u-ico"], .u-header .u-nav .u-i-actions .app-icon
+  font-size: 20px
+  // margin: -4px 4px 0 4px
+
+.theme-default .u-header .u-nav .u-i-actions [class*="u-ico"], .theme-default .u-header .u-nav .u-i-actions .app-icon
+  color: rgba(255, 255, 255, 0.6)
+
+.u-header .u-nav .u-i-actions .u-btn-outline:hover
+  border: 0 !important
+
+.theme-default .u-header .u-nav .u-i-actions .u-btn-outline:hover
+  background: rgba(255, 255, 255, 0.2) !important
+
+.u-header .u-nav .u-i-actions .u-btn-outline span
+  opacity: 0.5 !important
+
+.theme-default .u-header .u-nav .u-i-actions .u-btn-outline span
+  color: #fff !important
+
+.u-header .u-nav .u-i-actions .u-active, .u-header .u-nav .u-i-actions .app-icon:hover, .u-header .u-nav .u-i-actions a:hover .app-icon
+  background: none
+  color: #fff
+
+.u-header .u-nav ul .u-separator
+  position: relative
+  display: block
+  width: 34px
+  height: 50px
+
+.u-header .u-nav ul .u-separator:before
+  content: ""
+  position: absolute
+  top: 10px
+  height: 30px
+  left: 50%
+  margin-left: -1px
+  opacity: 0.3
+  width: 1px
+
+.theme-default .u-header .u-nav ul .u-separator:before
+  background: #fff
+
+.u-header .u-nav ul.u-nav-header a .app-icon, .u-header .u-nav ul.u-nav-header a [class*="u-pipe-ico"]
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
+  align-items: center
+  margin-right: 6px
+  margin-left: -8px
+
+.u-header .u-nav ul.u-nav-header a.u-no-border-bottom.active, .u-header .u-nav ul.u-nav-header a.u-no-border-bottom:hover
+  border-bottom: 0
+
+//End Header
+
+/* Layout */
+/*.u-title
+  -webkit-box-align: center
+  -ms-flex-align: center
+  align-items: center
+  color: #4e5d6d
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  font: 16px $font-family-base*/

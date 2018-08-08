@@ -1,0 +1,61 @@
+.u-fab
+  position relative
+  vertical-align middle
+
+.z-fab
+  z-index $z-fab
+
+.u-fab-opened
+  .u-fab-actions
+    opacity 1
+    transform scaleX(1) scaleY(1) translateX(0) translateY(0)
+    pointer-events all
+  .u-fab-icon
+    transform rotate3d(0, 0, 1, 180deg)
+    opacity 0
+  .u-fab-active-icon
+    transform rotate3d(0, 0, 1, 0deg)
+    opacity 1
+
+.u-fab-icon, .u-fab-active-icon
+  transition opacity .4s, transform .4s
+.u-fab-icon
+  opacity 1
+  transform rotate3d(0, 0, 1, 0deg)
+.u-fab-active-icon
+  opacity 0
+  transform rotate3d(0, 0, 1, -180deg)
+
+.u-fab-actions
+  position absolute
+  opacity 0
+  transition all .2s ease-in
+  pointer-events none
+  .u-btn
+    margin $fab-margin
+
+.u-fab-right
+  transform scaleX(.4) scaleY(.4) translateX(-100%)
+  top 0
+  bottom 0
+  left 120%
+.u-fab-left
+  transform scaleX(.4) scaleY(.4) translateX(100%)
+  top 0
+  bottom 0
+  right 120%
+  flex-direction row-reverse
+.u-fab-up
+  transform scaleX(.4) scaleY(.4) translateY(100%)
+  flex-direction column-reverse
+  justify-content center
+  bottom 120%
+  left 0
+  right 0
+.u-fab-down
+  transform scaleX(.4) scaleY(.4) translateY(-100%)
+  flex-direction column
+  justify-content center
+  top 120%
+  left 0
+  right 0

@@ -1,0 +1,76 @@
+[
+  {
+    "headerTitle": "Introduction"
+  },
+  {
+    "name": "Get Started",
+    "icon": {
+      "icon": "heart",
+      "type": "fa"
+    },
+    "href": "#/"
+  },
+  {
+    "headerTitle": "Style & Identity"
+  },
+  {
+    "name": "Color Palette",
+    "icon": {
+      "icon": "style",
+      "type": "material"
+    },
+    "href": "#/showcase/style-and-identity/color-palette"
+  },
+  {
+    "headerTitle": "Components"
+  },
+  {
+    "name": "UI Kits",
+    "icon": {
+      "icon": "uikit",
+      "type": "fa",
+      "style": "brand",
+      "class": "text-success"
+    },
+    "submenu": [
+      {
+        "name": "Button",
+        "icon": {
+          "icon": "box",
+          "type": "fa"
+        },
+        "href": "#/components/buttons"
+      }
+    ]
+  },
+  {
+    "name": "Advanced",
+    "icon": {
+      "icon": "question-circle",
+      "type": "fa"
+    },
+    "hideIcon": true,
+    "submenu": [
+      {
+        "name": "Uloc Vue Framework",
+        "styleClass": "u-ico-person"
+      },
+      {
+        "name": "Support",
+        "styleClass": "u-ico-settings"
+      }
+    ]
+  },
+  {
+    "separator": true
+  },
+  {
+    "name": "About Uloc Theme",
+    "icon": {
+      "icon": "info-circle",
+      "type": "fa"
+    },
+    "hideIcon": true,
+    "styleClass": "hide show-folded"
+  }
+]

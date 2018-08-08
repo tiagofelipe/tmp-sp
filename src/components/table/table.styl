@@ -1,0 +1,226 @@
+.u-table-container
+  border-radius $table-border-radius
+  box-shadow $table-box-shadow
+  position relative
+  &.fullscreen
+    background-color inherit
+
+.u-table-top
+  min-height 64px
+  padding 8px 24px
+  &:before
+    content ''
+    position absolute
+    pointer-events none
+    top 0
+    right 0
+    bottom 0
+    left 0
+    opacity .2
+    transition $table-transition
+  .u-table-control
+    min-height 36px
+    padding 8px 0
+    flex-wrap wrap
+.u-table-title
+  font-size 20px
+  letter-spacing 0.005em
+  font-weight 400
+.u-table-separator
+  min-width 8px !important
+.u-table-nodata .u-icon
+  font-size 200%
+  padding-right 15px
+
+.u-table-progress
+  height 0 !important
+  td
+    padding 0 !important
+    border-bottom 1px solid transparent !important
+  .u-progress
+    position absolute
+    height 2px
+    bottom 0
+
+.u-table-middle
+  max-width 100%
+
+.u-table-bottom
+  min-height 48px
+  padding 4px 14px 4px 24px
+  font-size 12px
+  .u-table-control
+    min-height 24px
+
+.u-table-control
+  display flex
+  align-items center
+
+.u-table-sort-icon
+  transition $table-transition
+  will-change opacity, transform
+  opacity 0
+  font-size 120%
+.u-table-sort-icon-left,
+.u-table-sort-icon-center
+  margin-left 4px
+.u-table-sort-icon-right
+  margin-right 4px
+
+.u-table
+  width 100%
+  max-width 100%
+  border-collapse collapse
+  border-spacing 0
+
+  thead tr
+    height 56px
+
+  th
+    font-weight 500
+    font-size 12px
+    transition $table-transition
+    user-select none
+    &.sortable
+      cursor pointer
+      &:hover .u-table-sort-icon
+        opacity .5
+    &.sorted .u-table-sort-icon
+      opacity 1 !important
+    &.sort-desc .u-table-sort-icon
+      transform rotate(180deg)
+
+  tbody tr
+    transition $table-transition
+    will-change background
+
+  th, td
+    white-space nowrap
+    padding 7px 24px
+    position relative
+
+  thead, td, th
+    border-style solid
+    border-width 0
+
+  tbody td
+    height 48px
+    font-weight 400
+    font-size 13px
+
+  .u-radial-ripple
+    margin-bottom -100%
+
+.u-table-col-auto-width
+  width 1px
+
+.u-table-bottom-item
+  margin-right 24px
+
+.u-table-grid
+  box-shadow none
+  .u-table-bottom
+    border-top 0
+  .u-table
+    height 2px
+    thead
+      border 0
+
+/*
+ * Separators
+ */
+.u-table-horizontal-separator
+  thead, tbody td
+    border-width 0 0 1px 0
+
+.u-table-vertical-separator
+  thead
+    border-width 0 0 1px 0
+  td
+    border-width 0 0 0 1px
+  td:first-child
+    border-left 0
+
+.u-table-cell-separator
+  td
+    border-width 1px
+  td:first-child
+    border-left 0
+  td:last-child
+    border-right 0
+
+/*
+ * dense size
+ */
+
+table-dense()
+  .u-table-top
+    min-height 48px
+  .u-table-top, .u-table-bottom
+    padding-left 8px
+    padding-right 8px
+  .u-table-bottom
+    min-height 42px
+
+  .u-table-sort-icon
+    font-size 110%
+  .u-table
+    th, td
+      padding 4px 8px
+    thead tr
+      height 40px
+    tbody td
+      height 28px
+
+  .u-table-bottom-item
+    margin-right 8px
+
+.u-table-dense
+  table-dense()
+
+@media (max-width $breakpoint-sm-max)
+  table-dense()
+
+/*
+ * On light background
+ */
+.u-table-bottom // @stylint ignore
+  color $table-header-color
+  border-top 1px solid $table-border-color
+
+.u-table // @stylint ignore
+  color $table-color
+  thead, tr, th, td
+    border-color $table-border-color
+  th
+    color $table-header-color
+    &.sortable:hover, &.sorted
+      color $table-color
+  tbody tr
+    &.selected
+      background $table-selected-background
+    &:hover
+      background $table-hover-background
+
+/*
+ * On dark background
+ */
+.u-table-dark
+  color $table-dark-color
+
+  .u-table-bottom, .u-table-top
+    color $table-dark-header-color
+    border-top 1px solid $table-dark-border-color
+
+  thead, tr, th, td
+    border-color $table-dark-border-color
+  th
+    color $table-dark-header-color
+    &.sortable:hover, &.sorted
+      color $table-dark-color
+  tbody tr
+    &.selected
+      background $table-dark-selected-background
+    &:hover
+      background $table-dark-hover-background
+

@@ -1,0 +1,272 @@
+.u-datetime-input
+  min-width $datetime-input-min-width
+
+.u-datetime-controls
+  padding 0 10px 8px
+
+.u-datetime
+  font-size 12px
+  text-align center
+  user-select none
+  line-height initial
+  .modal-buttons
+    padding-top 8px
+
+.u-datetime-header
+  background currentColor
+  > div
+    color white
+
+.u-datetime-weekdaystring
+  font-size .8rem
+  background rgba(0, 0, 0, .1)
+  padding 5px 0
+
+.u-datetime-time
+  padding 10px 0
+
+div + .u-datetime-time
+  padding-top 0
+
+.u-datetime-ampm
+  font-size .9rem
+
+.u-datetime-datestring
+  font-size 2.7rem
+  span.small
+    font-size 1.2rem
+
+.u-datetime-link
+  pointer-events none
+  opacity .6
+  > span
+    cursor pointer
+    pointer-events all
+    display inline-block
+    width 100%
+    outline 0
+  &.active
+    opacity 1
+
+.u-datetime-clockstring
+  font-size 2.7rem
+  direction: ltr /* rtl:ignore */
+
+.u-datetime-selector
+  height 310px
+  overflow auto
+
+.u-datetime-view-day
+  width 250px
+  height 285px
+  color black
+
+.u-datetime-view-year, .u-datetime-view-month
+  > .u-btn:not(.active)
+    color black
+
+.u-datetime-month-stamp
+  font-size 16px
+
+.u-datetime-weekdays
+  margin-bottom 5px
+  div
+    opacity .6
+    width 35px
+    height 35px
+    line-height 35px
+    margin 0
+    padding 0
+    min-width 0
+    min-height 0
+    background transparent
+
+.u-datetime-days div
+  margin 1px
+  line-height 33px
+  width 33px
+  height 33px
+  border-radius 50%
+
+  &.u-datetime-day-active
+    background currentColor
+    > span
+      color white
+      font-weight bold
+  &.u-datetime-day-today
+    color currentColor
+    font-weight bold
+    font-size 14px
+  &:not(.u-datetime-fillerday):not(.disabled):not(.u-datetime-day-active):hover
+    background $grey-4
+
+.u-datetime-btn
+  font-weight normal
+  &.active
+    font-size 1.5rem
+    padding-top 1rem
+    padding-bottom 1rem
+
+.u-datetime-clock
+  width 250px
+  height 250px
+  border-radius 50%
+  background $grey-4
+  padding 24px
+
+.u-datetime-clock-circle
+  position relative
+  animation u-pop .5s /* rtl:ignore */
+
+.u-datetime-clock-center
+  height 6px
+  width 6px
+  top 0
+  margin auto
+  border-radius 50%
+  min-height 0
+  position absolute
+  left 0
+  right 0
+  bottom 0
+  background currentColor
+
+.u-datetime-clock-pointer
+  width 1px
+  height 50%
+  margin 0 auto
+  transform-origin top center /* rtl:ignore */
+  min-height 0
+  position absolute
+  left 0
+  right 0
+  bottom 0
+  background currentColor
+  span
+    position absolute
+    border-radius 50%
+    width 8px
+    height 8px
+    bottom -8px
+    left 0
+    min-width 0
+    min-height 0
+    transform translate(-50%, -50%)
+    background currentColor
+
+.u-datetime-arrow
+  color $grey-7
+
+.u-datetime-dark
+  background $dark
+  background var(--u-color-dark)
+  .u-datetime-arrow
+    color $light
+    color var(--u-color-light)
+  .u-datetime-header, .u-datetime-clock
+    background $grey-8
+  .u-datetime-view-day
+    color white
+  .u-datetime-view-year, .u-datetime-view-month
+    > .u-btn:not(.active)
+      color white
+  .u-datetime-days div
+    &.u-datetime-day-active > span, &:not(.u-datetime-fillerday):not(.disabled):not(.u-datetime-day-active):hover
+      color black
+
+body.desktop
+  .u-datetime-clock-position:not(.active):hover
+    background $grey-2 !important
+  .u-datetime-dark .u-datetime-clock-position:not(.active):hover
+    color black
+
+.u-datetime-clock-position
+  position absolute
+  min-height 32px
+  width 32px
+  height 32px
+  font-size 12px
+  line-height 32px
+  margin 0
+  padding 0
+  transform translate(-50%, -50%) /* rtl:ignore */
+  border-radius 50%
+  &:not(.active)
+    color black
+    .u-datetime-dark &
+      color white
+  &.active
+    background currentColor
+    > span
+      color white
+
+for $pos in 0..12
+  $degree = (270 + 30 * $pos)
+  .u-datetime-clock-pos-{$pos}
+    top round(((1 + sin($degree * 1deg)) * 100%) / 2, 2)
+    left round(((1 + cos($degree * 1deg)) * 100%) / 2, 2) /* rtl:ignore */
+
+for $pos in 0..23
+  $degree = (270 + 15 * $pos)
+  .u-datetime-clock-pos-{$pos}.fmt24
+    top round(((1 + sin($degree * 1deg)) * 100%) / 2, 2)
+    left round(((1 + cos($degree * 1deg)) * 100%) / 2, 2) /* rtl:ignore */
+
+.u-datetime-range
+  &.row
+    .u-datetime-range-left
+      border-top-right-radius 0
+      border-bottom-right-radius 0
+    .u-datetime-range-right
+      border-top-left-radius 0
+      border-bottom-left-radius 0
+  &.column > div + div
+    margin-top $datetime-range-space
+
+@media (max-width $breakpoint-sm-max)
+  .u-datetime-ampm
+    margin-left 1.5rem
+  .u-datetime-datestring span
+    margin 10px 5px
+    &.small
+      margin-top 1.3rem
+  .u-datetime
+    width 290px
+    &:not(.no-border)
+      &:not(.u-datetime-dark) .u-datetime-content
+        border-width 0 1px 1px 1px
+        border-style solid
+        border-color $grey-4
+      &.u-datetime-dark
+        border 1px solid $dark
+        border 1px solid var(--u-color-dark)
+
+@media (min-width $breakpoint-md-min)
+  .u-datetime-datestring
+    padding 10px 0
+  .u-datetime-ampm
+    margin-top 5px
+    div
+      margin 2px 0
+  .u-datetime-header
+    width 170px
+    position relative
+  .u-datetime-weekdaystring
+    position absolute
+    top 0
+    left 0
+    right 0
+  .u-datetime-content
+    width 290px
+  .u-datetime
+    width 480px
+    &:not(.no-border)
+      &:not(.u-datetime-dark) .u-datetime-content
+        border-width 1px 1px 1px 0
+        border-style solid
+        border-color $grey-4
+      &.u-datetime-dark
+        border 1px solid $dark
+        border 1px solid var(--u-color-dark)
+  .u-datetime-minimal
+    width 320px

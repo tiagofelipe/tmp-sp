@@ -1,0 +1,197 @@
+[
+  {
+    "headerTitle": "Introduction"
+  },
+  {
+    "name": "Get Started",
+    "icon": "heart",
+    "href": "#/"
+  },
+  {
+    "headerTitle": "Components"
+  },
+  {
+    "name": "UI Kits",
+    "icon": {"icon": "uikit", "type": "default", "style": "brand", "class": "text-success"},
+    "submenu": [
+      {
+        "name": "Button",
+        "icon": "box",
+        "href": "#/components/buttons"
+      },
+      {
+        "name": "Button Group",
+        "icon": "object-ungroup",
+        "href": "#/components/button-group"
+      },
+      {
+        "name": "Dropdown",
+        "icon": "object-ungroup",
+        "href": "#/components/dropdown"
+      },
+      {
+        "name": "Icons",
+        "icon": "paint-brush",
+        "preventClose": true
+      },
+      {
+        "name": "Float Action Button",
+        "icon": "box",
+        "href": "#/components/fab"
+      }
+    ]
+  },
+  {
+    "name": "Forms",
+    "icon": {"icon": "wpforms", "style": "brand"},
+    "preventClose": true,
+    "submenu": [
+      {
+        "name": "Buttons",
+        "icon": "box",
+        "href": "#/components/buttons"
+      },
+      {
+        "name": "Input",
+        "icon": "box",
+        "href": "#/components/input"
+      },
+      {
+        "name": "Chips Input",
+        "icon": "box",
+        "href": "#/components/chipsinput"
+      },
+      {
+        "name": "Field",
+        "icon": {"icon": "text_fields", "type": "material"},
+        "href": "#/components/field"
+      },
+      {
+        "name": "Toggle",
+        "icon": "box",
+        "href": "#/components/toggle"
+      },
+      {
+        "name": "Color Picker",
+        "icon": "box",
+        "href": "#/components/colorpicker"
+      },
+      {
+        "name": "Color Input",
+        "icon": "box",
+        "href": "#/components/colorinput"
+      },
+      {
+        "name": "Slider",
+        "icon": "box",
+        "href": "#/components/slider"
+      },
+      {
+        "name": "Radio",
+        "icon": "box",
+        "href": "#/components/radio"
+      },
+      {
+        "name": "Checkbox",
+        "icon": "box",
+        "href": "#/components/checkbox"
+      },
+      {
+        "name": "Option Group",
+        "icon": "box",
+        "href": "#/components/optiongroup"
+      }
+    ]
+  },
+  {
+    "name": "Popups",
+    "icon": {"icon": "window", "style": "regular"},
+    "submenu": [
+      {
+        "name": "Dialog",
+        "icon": {"icon": "comment-alt", "type": "default", "style": "regular"},
+        "href": "#/components/dialog"
+      },
+      {
+        "name": "Notify",
+        "icon": {"icon": "exclamation-square", "type": "default", "style": "regular"},
+        "href": "#/components/notify"
+      },
+      {
+        "name": "Popover",
+        "icon": {"icon": "filter_none", "type": "material", "style": "regular"},
+        "href": "#/components/popover"
+      },
+      {
+        "name": "Tooltip",
+        "icon": {"icon": "speaker_notes", "type": "material", "style": "regular"},
+        "href": "#/components/tooltip"
+      }
+    ]
+  },
+  {
+    "name": "Tables",
+    "icon": {"icon": "table", "style": "light"},
+    "href": "#/components/tables"
+  },
+  {
+    "name": "Progress",
+    "icon": {"icon": "done", "type": "material", "style": "brand"},
+    "submenu": [
+      {
+        "name": "Ajax Bar",
+        "icon": {"icon": "trending_flat", "type": "material"},
+        "href": "#/components/ajaxbar"
+      },
+      {
+        "name": "Loading",
+        "icon": {"icon": "hourglass_full", "type": "material"},
+        "href": "#/components/loading"
+      },
+      {
+        "name": "Inner Loading",
+        "icon": {"icon": "hourglass_empty", "type": "material"},
+        "href": "#/components/innerloading"
+      },
+      {
+        "name": "Progress Bar",
+        "icon": {"icon": "sort", "type": "material"},
+        "href": "#/components/progressbar"
+      },
+      {
+        "name": "Spinner",
+        "icon": {"icon": "sort", "type": "material"},
+        "href": "#/components/spinner"
+      },
+      {
+        "name": "Knob",
+        "icon": {"icon": "timelapse", "type": "material"},
+        "href": "#/components/knob"
+      }
+    ]
+  },
+  {
+    "name": "Advanced",
+    "icon": "question-circle",
+    "hideIcon": true,
+    "submenu": [
+      {
+        "name": "Uloc Vue Framework",
+        "styleClass": "u-ico-person"
+      },
+      {
+        "name": "Support",
+        "styleClass": "u-ico-settings"
+      }
+    ]
+  },
+  {
+    "separator": true
+  },
+  {
+    "name": "About Uloc Theme",
+    "icon": "info-circle",
+    "hideIcon": true,
+    "styleClass": "hide show-folded"
+  }
+]

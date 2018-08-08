@@ -1,0 +1,102 @@
+.u-tree-node
+  margin 0
+  list-style-type none
+  position relative
+  padding 0 0 3px 22px
+
+  &:after
+    content ''
+    position absolute
+    top -3px
+    bottom 0
+    width 1px
+    right auto
+    left -13px
+    border-left 1px solid currentColor
+  &:last-child:after
+    display none
+
+.u-tree-node-header:before
+  content ''
+  position absolute
+  top -3px
+  bottom 50%
+  width 35px
+  left -35px
+  border-left 1px solid currentColor
+  border-bottom 1px solid currentColor
+
+.u-tree-children
+  padding-left 25px
+  &.disabled
+    pointer-events none
+.u-tree-node-body
+  padding 5px 0 8px 5px
+
+.u-tree-node-parent
+  padding-left 2px
+  > .u-tree-node-header:before
+    width 15px
+    left -15px
+  > .u-tree-node-collapsible > .u-tree-node-body
+    padding 5px 0 8px 27px
+    &:after
+      content ''
+      position absolute
+      top 0
+      width 1px
+      height 100%
+      right auto
+      left 12px
+      border-left 1px solid currentColor
+      bottom 50px
+
+.u-tree-node-link
+  cursor pointer
+
+.u-tree-node-selected
+  background rgba(0, 0, 0, .15)
+.u-tree-dark .u-tree-node-selected
+  background rgba(255, 255, 255, .4)
+
+body.desktop
+  .u-tree-node-link:hover
+    background rgba(0, 0, 0, .1)
+  .u-tree-dark .u-tree-node-link:hover
+    background rgba(255, 255, 255, .3)
+
+.u-tree-node-header
+  padding 4px
+  margin-top 3px
+  border-radius $generic-border-radius
+  &.disabled
+    pointer-events none
+.u-tree-icon
+  font-size 1.5em
+.u-tree-img
+  height 3em
+  &.avatar
+    width 2em
+    height 2em
+
+.u-tree-arrow
+  font-size 1rem
+  width 1rem
+  height 1rem
+.u-tree-arrow-rotate
+  transform rotate(90deg)
+[dir=rtl]
+  .u-tree-arrow
+    transform rotate(180deg) /* rtl:ignore */
+  .u-tree-arrow-rotate
+    transform rotate(90deg) /* rtl:ignore */
+
+.u-tree
+  // Remove connectors before root
+  > .u-tree-node
+    padding 0
+    &:after, > .u-tree-node-header:before
+      display none
+  // leave space for root empty node
+  > .u-tree-node-child > .u-tree-node-header
+    padding-left 24px

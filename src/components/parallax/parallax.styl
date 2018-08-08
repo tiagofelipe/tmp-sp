@@ -1,0 +1,22 @@
+.u-parallax
+  position relative
+  width 100%
+  overflow hidden
+  border-radius inherit
+
+.u-parallax-image
+  > img
+    visibility hidden
+    position absolute
+    left 50%
+    bottom 0
+    min-width 100%
+    min-height 100%
+    max-height none !important
+    max-width  none !important
+
+    &.ready
+      visibility visible
+
+.u-parallax-text
+  text-shadow $paralax-text-shadow

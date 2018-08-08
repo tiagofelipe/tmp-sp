@@ -1,0 +1,124 @@
+$slider-height              = 28px
+$slider-track-height        = 2px
+$slider-mark-height         = 10px
+$slider-handle-size         = 12px
+$slider-label-transform     = translateX(-50%) translateY(-139%) scale(1)
+
+.u-slider-track, .u-slider-mark
+  opacity .4
+  background currentColor
+
+.u-slider-track
+  position absolute
+  top 50%
+  left 0
+  transform translateY(-50%)
+  height $slider-track-height
+  width 100%
+  &:not(.dragging)
+    transition all .3s ease
+  &.active-track
+    opacity 1
+  &.track-draggable.dragging
+    height ($slider-track-height * 2)
+    transition height .3s ease
+  &.handle-at-minimum
+    background transparent
+
+.u-slider-mark
+  position absolute
+  top 50%
+  height $slider-mark-height
+  width 2px
+  transform translateX(-50%) translateY(-50%)
+
+.u-slider-handle-container
+  position relative
+  height 100%
+  margin-left ($slider-handle-size / 2)
+  margin-right ($slider-handle-size / 2)
+
+.u-slider-label
+  top 0
+  left ($slider-handle-size / 2)
+  opacity 0
+  transform translateX(-50%) translateY(0) scale(0)
+  transition all .2s
+  padding 2px 4px
+  &.label-always
+    opacity 1
+    transform $slider-label-transform
+
+.u-slider-handle
+  position absolute
+  top 50%
+  transform translate3d(-50%, -50%, 0)
+  transform-origin center
+  transition all .3s ease
+  width $slider-handle-size
+  height $slider-handle-size
+  outline 0
+  .u-chip
+    max-width unset
+  &.dragging
+    transform translate3d(-50%, -50%, 0) scale(1.3)
+    transition opacity .3s ease, transform .3s ease
+    .u-slider-label
+      opacity 1
+      transform $slider-label-transform
+  background currentColor
+  &.handle-at-minimum
+    background white
+    &:after
+      content ''
+      position absolute
+      top 0
+      right 0
+      bottom 0
+      left 0
+      background transparent
+      border-radius inherit
+      border 2px solid currentColor
+
+.u-slider-ring
+  position absolute
+  top -50%
+  left -50%
+  width 200%
+  height 200%
+  border-radius inherit
+  pointer-events none
+  opacity 0
+  transform scale(0)
+  transition all .2s ease-in
+  background currentColor
+
+.u-slider:not(.disabled):not(.readonly)
+  .u-slider-handle:focus, &:focus, &:hover
+    .u-slider-ring
+      opacity .4
+      transform scale(1)
+
+.u-slider.disabled
+  .u-slider-handle
+    border 2px solid white
+  .u-slider-handle.handle-at-minimum
+    background currentColor
+
+.u-slider
+  height $slider-height
+  width 100%
+  color $primary
+  color var(--u-color-primary)
+  cursor pointer
+
+  &.label-always, &.with-padding
+    padding 36px 0 8px
+    height 64px
+
+  &.has-error
+    color $negative
+    color var(--u-color-negative)
+  &.has-warning
+    color $warning
+    color var(--u-color-warning)

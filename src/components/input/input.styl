@@ -1,0 +1,79 @@
+@keyframes webkit-autofill-on
+  to
+    background transparent
+    color $form-autofill
+@keyframes webkit-autofill-off
+  to
+    background transparent
+
+.u-input-target, .u-input-shadow
+  border 0
+  outline 0
+  padding 0
+  background transparent
+  min-height 18px
+  font-size inherit
+  resize none
+  display flex
+  align-items center
+  color black
+  &:-webkit-autofill
+    -webkit-animation-name webkit-autofill-on
+    -webkit-animation-fill-mode both
+  &.u-input-autofill:not(:-webkit-autofill)
+    -webkit-animation-name webkit-autofill-off
+    -webkit-animation-fill-mode both
+  &::-ms-clear, &::-ms-reveal
+    display none
+    width 0
+    height 0
+  &:invalid
+    box-shadow inherit
+
+.u-input-target, input.u-input-target, textarea.u-input-target, textarea.u-input-shadow
+  line-height 19px
+  outline 0
+.u-input-chips
+  min-height 36px !important
+
+.u-if
+  .u-input-target-placeholder
+    color $form-dark !important
+  .u-input-target
+    &::-webkit-input-placeholder /* Chrome/Opera/Safari */
+      color $form-dark !important
+    &::-moz-placeholder /* Firefox 19+ */
+      color $form-dark !important
+    &:-ms-input-placeholder /* IE 10+ */
+      color $form-dark !important
+
+.u-if-dark
+  .u-input-target-placeholder
+    color #979797 !important
+  .u-input-target
+    &::-webkit-input-placeholder /* Chrome/Opera/Safari */
+      color #979797 !important
+    &::-moz-placeholder /* Firefox 19+ */
+      color #979797 !important
+    &:-ms-input-placeholder /* IE 10+ */
+      color #979797 !important
+
+.u-if-inverted:not(.u-if-inverted-light)
+  .u-input-target-placeholder
+    color #ddd !important
+  .u-input-target
+    &::-webkit-input-placeholder /* Chrome/Opera/Safari */
+      color #ddd !important
+    &::-moz-placeholder /* Firefox 19+ */
+      color #ddd !important
+    &:-ms-input-placeholder /* IE 10+ */
+      color #ddd !important
+
+.u-input-shadow
+  overflow hidden
+  visibility hidden
+  pointer-events none
+  height auto
+  width 100% !important
+textarea.u-input-target
+  height 0

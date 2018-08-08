@@ -1,0 +1,106 @@
+.u-window-container
+  z-index $z-window
+
+.u-window-layout
+  padding 4px
+  background transparent
+
+.u-window-resizable-area
+    z-index $z-window-ra
+    position absolute
+    &.r-top, &.r-bottom
+      cursor n-resize
+    &.r-left, &.r-right
+      cursor e-resize
+    &.r-top-left, &.r-bottom-right
+      cursor nw-resize
+    &.r-top-right, &.r-bottom-left
+      cursor ne-resize
+
+.u-window-maximized
+  .u-window
+    border none !important
+  .u-window-resizable-area
+    display none
+
+.u-window
+  z-index: $z-window
+  border #1883D7 1px solid
+  display flex
+  flex-direction column
+  justify-content space-between
+  -box-shadow(1px 1px 20px 0px rgba(0,0,0,0.25))
+
+  .u-window-header
+    display flex
+    flex 0 30px
+    height 30px
+    flex-direction row
+    -webkit-user-select: none
+    -moz-user-select: none
+    -ms-user-select: none
+    user-select: none
+
+    .u-window-header-title, .u-window-header-buttons
+      flex 1
+      display flex
+      justify-content space-between
+
+    .u-window-header-title
+      align-items center
+      padding 5px 0 0 10px
+      .u-window-header-title-ico
+        padding-right 4px
+
+      span
+        display flex
+        align-items center
+
+
+    .u-window-header-buttons
+      justify-content flex-end
+      button
+        display flex
+        border none
+        background none
+        width 30px
+        align-items center
+        justify-content center
+        transition all 0.2s
+        svg
+          stroke: #211915
+        &:hover
+          background-color #E5E5E5
+        &[class$="-close"]:hover
+          background-color #E81123
+          color: #FFFFFF
+          svg
+            stroke: #ffffff !important
+
+    &.u-window-header-moved
+      cursor move
+
+  .u-window-content
+    flex 1
+.window-no-click-outside .u-window {
+  animation: shake-window 0.82s cubic-bezier(.36,.07,.19,.97) both;
+  transform: translate3d(0, 0, 0);
+}
+
+@keyframes shake-window {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
