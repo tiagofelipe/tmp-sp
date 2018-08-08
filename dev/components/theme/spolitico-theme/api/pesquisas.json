@@ -1,0 +1,44 @@
+{
+    "pesquisas": [
+        {
+            "id": 1,
+            "nome": "Pesquisa do Eleitorado",
+            "tipo": {
+                "id": 1,
+                "nome": "Privada"
+            },
+            "stats": {
+                "respostas": 1589,
+                "incompletos": 27,
+                "cadastros": 1616,
+                "localizacoes": 867
+            },
+            "status": {
+                "id": 1,
+                "nome": "Ativa"
+            }
+        },
+        
+        {
+            "id": 2,
+            "nome": "Pesquisa de Preferência",
+            "tipo": {
+                "id": 1,
+                "nome": "Privada"
+            },
+            "stats": {
+                "limite": 27937,
+                "convidados": 27937,
+                "abertos": 12546,
+                "respostas": 9564,
+                "incompletos": 344,
+                "cadastros": 9908,
+                "localizacoes": 7546
+            },
+            "status": {
+                "id": 1,
+                "nome": "Ativa"
+            }
+        }
+    ]
+}

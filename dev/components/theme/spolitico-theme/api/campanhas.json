@@ -1,0 +1,118 @@
+{
+    "campanhas": [
+        {
+            "id": 1,
+            "nome": "Convite para Movimento Partidário",
+            "canal": {
+                "id": 1,
+                "nome": "Email"
+            },
+            "status": {
+                "id": 100,
+                "nome": "Enviado"
+            },
+            "ultimaModificacao": {
+                "pessoa":{
+                    "id":1,
+                    "nome": "Tiago Felipe"
+                },
+                "data": 1468893959123
+            },
+            "dataEnvio": 1468893959123,
+            "lista":{
+                "id":1,
+                "nome": "Grupo Campanha"
+            },
+            "inscritos": 100,
+            "stats":{
+                "aberto":48,
+                "cliques":26
+            }
+        },
+        
+        {
+            "id": 2,
+            "nome": "Convite para Movimento Partidário",
+            "canal": {
+                "id": 2,
+                "nome": "WhatsApp"
+            },
+            "status": {
+                "id": 100,
+                "nome": "Enviado"
+            },
+            "ultimaModificacao": {
+                "pessoa":{
+                    "id":1,
+                    "nome": "Tiago Felipe"
+                },
+                "data": 1468893959123
+            },
+            "dataEnvio": 1468893959123,
+            "lista":{
+                "id":1,
+                "nome": "Grupo Campanha"
+            },
+            "inscritos": 149,
+            "stats":{
+                "cliques":87
+            }
+        },
+        
+        {
+            "id": 3,
+            "nome": "Pedido de Voto",
+            "canal": {
+                "id": 1,
+                "nome": "Email"
+            },
+            "status": {
+                "id": 0,
+                "nome": "Rascunho"
+            },
+            "ultimaModificacao": {
+                "pessoa":{
+                    "id":1,
+                    "nome": "Tiago Felipe"
+                },
+                "data": 1468893959123
+            },
+            "lista":{
+                "id":14,
+                "nome": "Manual",
+                "tipo": "Segmentada"
+            },
+            "inscritos": 27569
+        },
+        
+        {
+            "id": 4,
+            "nome": "Pedido de Voto",
+            "canal": {
+                "id": 3,
+                "nome": "SMS"
+            },
+            "status": {
+                "id": 99,
+                "nome": "Envio em andamento"
+            },
+            "dataEnvio": 1468893959123,
+            "ultimaModificacao": {
+                "pessoa":{
+                    "id":1,
+                    "nome": "Tiago Felipe"
+                },
+                "data": 1468899959123
+            },
+            "lista":{
+                "id":14,
+                "nome": "Manual",
+                "tipo": "Segmentada"
+            },
+            "inscritos": 264569,
+            "stats":{
+                "cliques":9874
+            }
+        }
+    ]
+}

@@ -1,0 +1,28 @@
+{
+    "canais": [
+        {
+            "id": 1,
+            "nome": "Presencial"
+        },
+        {
+            "id": 2,
+            "nome": "E-mail"
+        },
+        {
+            "id": 3,
+            "nome": "Telefone"
+        },
+        {
+            "id": 4,
+            "nome": "Formulário web"
+        },
+        {
+            "id": 5,
+            "nome": "Redes Sociais"
+        },
+        {
+            "id": 6,
+            "nome": "Carta"
+        }
+    ]
+}

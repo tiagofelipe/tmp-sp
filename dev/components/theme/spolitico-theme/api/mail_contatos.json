@@ -1,0 +1,18 @@
+{
+    "contatos": [
+        {
+            "id": 1,
+            "nome": "Daiane Soares",
+            "thumb": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHBvaW50ZXItZXZlbnRzPSJub25lIiB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgc3R5bGU9IndpZHRoOiAxMDBweDsgaGVpZ2h0OiAxMDBweDsgYmFja2dyb3VuZC1jb2xvcjogcmdiKDIzMSwgNzYsIDYwKTsiPjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHk9IjUwJSIgeD0iNTAlIiBkeT0iMC4zNWVtIiBwb2ludGVyLWV2ZW50cz0iYXV0byIgZmlsbD0iI2ZmZmZmZiIgZm9udC1mYW1pbHk9IkhlbHZldGljYU5ldWUtTGlnaHQsSGVsdmV0aWNhIE5ldWUgTGlnaHQsSGVsdmV0aWNhIE5ldWUsSGVsdmV0aWNhLCBBcmlhbCxMdWNpZGEgR3JhbmRlLCBzYW5zLXNlcmlmIiBzdHlsZT0iZm9udC13ZWlnaHQ6IG5vcm1hbDsgZm9udC1zaXplOiA0MHB4OyI+RFM8L3RleHQ+PC9zdmc+",
+            "email": "daiane.soares@wtis.com.br",
+            "grupos": "Atendimento, Comitê Central, Conquistadores"
+        },
+        {
+            "id": 2,
+            "nome": "Tiago Felipe",
+            "thumb": "img/CEO-foto.jpg",
+            "email": "tiago@tiagofelipe.com",
+            "grupos": "Atendimento"
+        }
+    ]
+}

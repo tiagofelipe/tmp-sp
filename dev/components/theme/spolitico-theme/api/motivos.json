@@ -1,0 +1,28 @@
+{
+    "motivos": [
+        {
+            "id": 1,
+            "nome": "Solicitação"
+        },
+        {
+            "id": 2,
+            "nome": "Elogio"
+        },
+        {
+            "id": 3,
+            "nome": "Sugestão"
+        },
+        {
+            "id": 4,
+            "nome": "Crítica"
+        },
+        {
+            "id": 5,
+            "nome": "Reclamação"
+        },
+        {
+            "id": 6,
+            "nome": "Denúncia"
+        }
+    ]
+}

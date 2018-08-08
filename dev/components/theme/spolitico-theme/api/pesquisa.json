@@ -1,0 +1,31 @@
+{
+    "pesquisa":
+            {
+                "id": 1,
+                "nome": "Pesquisa do Eleitorado",
+                "tipo": {
+                    "id": 2,
+                    "nome": "Pública"
+                },
+                "link": "http://i0.spolitico.com/publico/pesquisa1",
+                "stats": {
+                    "respostas": 1589,
+                    "abertos": 2649,
+                    "incompletos": 27,
+                    "cadastros": 1616,
+                    "localizacoes": 867
+                },
+                "status": {
+                    "id": 100,
+                    "nome": "Ativa"
+                },
+                "dataInicio": 1468893959123,
+                "perguntas": [
+                    {
+                        "id": 1,
+                        "titulo": "Teste"
+                    }
+                ]
+            }
+
+}

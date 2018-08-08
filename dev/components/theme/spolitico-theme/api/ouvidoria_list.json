@@ -1,0 +1,298 @@
+{
+    "tickets": [
+        {
+            "id": 3,
+            "solicitante": {
+                "id": 1,
+                "nome": "Edson Amorim",
+                "thumb": "img/edson.jpg",
+                "comunicacao": [
+                    {
+                        "id": 1,
+                        "nome": "Email",
+                        "selected": true
+                    },
+                    {
+                        "id": 2,
+                        "nome": "Whatsapp"
+                    },
+                    {
+                        "id": 3,
+                        "nome": "SMS"
+                    }
+                ]
+            },
+            "lat": "-15.148481940078748",
+            "lng": "-42.87161350250244",
+            "assunto": "Lixo na minha rua a mais de três dias",
+            "mensagem": "Já faz mais de três dias que tem um enorme lixão em frente a minha residência e ninguém toma nenhuma providência, o cheiro está horrível. <br><br>Por favor que este problema seja resolvido o mais breve possível.",
+            "imagem": "img/lixo.jpg",
+            "anexos": [{
+                    "name": "lixo.jpg",
+                    "type": "image",
+                    "url": "img/lixo.jpg"
+                }],
+            "status": {
+                "id": 2,
+                "nome": "Em andamento"
+            },
+            "atribuicao": {
+                "id": 1,
+                "nome": "Daiane Soares"
+            },
+            "canal": {
+                "id": 1,
+                "nome": "Formulário Web"
+            },
+            "motivo": {
+                "id": 1,
+                "nome": "Solicitação"
+            },
+            "prioridade": {
+                "id": 2,
+                "nome": "Urgente"
+            },
+            "date": 1468843613000,
+            "tags": ["Saneamento básico", "Lixo"],
+            "andamentos": [
+                {
+                    "id": 1003,
+                    "date": 1468934343123,
+                    "pessoa": {
+                        "id": 1,
+                        "thumb": "img/CEO-foto.jpg",
+                        "nome": "Tiago Felipe"
+                    },
+                    "eventos": [
+                        {
+                            "name": "status",
+                            "lastValueId": "2",
+                            "lastValueName": "Em andamento",
+                            "valueId": 100,
+                            "value": "Concluído"
+                        }
+                    ],
+                    "mensagem": "Edson, <br><br>Venho informar que o lixo já foi coletado e sua rua está limpa, pedimos desculpas pelo problema e agradecemos sua informação, ficamos à disposição sempre.<br><br>Atenciosamente,<br>Tiago Felipe<br>Serviço de Atendimento ao Cidadão<br>Demandas Urgêntes<br>0800 887 0589"
+                },
+                {
+                    "id": 1002,
+                    "date": 1468893959123,
+                    "transferencia": {
+                        "id": 2,
+                        "thumb": "img/CEO-foto.jpg",
+                        "nome": "Tiago Felipe"
+                    },
+                    "pessoa": {
+                        "id": 1,
+                        "thumb": "img/a4.png",
+                        "nome": "Daiane Soares"
+                    }
+                },
+                {
+                    "id": 1001,
+                    "date": 1468893943123,
+                    "pessoa": {
+                        "id": 1,
+                        "thumb": "img/a4.png",
+                        "nome": "Daiane Soares"
+                    },
+                    "eventos": [
+                        {
+                            "name": "status",
+                            "lastValueId": "1",
+                            "lastValueName": "Aberto",
+                            "valueId": 2,
+                            "value": "Em andamento"
+                        }
+                    ],
+                    "mensagem": "Olá senhor Edson, <br><br>Lamentamos o ocorrido e informo que já encaminhei sua solicitação para o setor responsável e o mesmo irá te responder com a solução no prazo máximo de 6 horas. Informo também que classifiquei sua solicitação como Urgente.<br><br>Atenciosamente,<br>Daiane Soares<br>Serviço de Atendimento ao Cidadão<br>0800 887 0589"
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "solicitante": {
+                "id": 1,
+                "nome": "Daiane Soares",
+                "thumb": "img/a3.jpg"
+            },
+            "lat": "-15.146617846667441",
+            "lng": "-42.87714958190918",
+            "assunto": "Visitar meus pais na comunidade Pajeú",
+            "imagem": "img/lixo.jpg",
+            "status": {
+                "id": 1,
+                "nome": "Aberto"
+            },
+            "canal": {
+                "id": 4,
+                "nome": "Whatsapp"
+            },
+            "motivo": {
+                "id": 2,
+                "nome": "Denúncia"
+            },
+            "prioridade": {
+                "id": 2,
+                "nome": "Urgente"
+            },
+            "date": 1468843423189
+        },
+        {
+            "id": 5,
+            "solicitante": {
+                "id": 2,
+                "nome": "Tiago Felipe",
+                "thumb": "img/a2.jpg"
+            },
+            "lat": "-15.150718830499253",
+            "lng": "-42.87916660308838",
+            "assunto": "Teste de chamado com um texto com vários caracteres para verificar a compatibilidade do layout, inclusive modo mobile. A linha horizontal tem que se adaptar com a classe .text-ellipsis.",
+            "status": {
+                "id": 1,
+                "nome": "Aberto"
+            },
+            "atribuicao": {
+                "id": 1,
+                "nome": "Daiane Soares"
+            },
+            "canal": {
+                "id": 2,
+                "nome": "Telefone"
+            },
+            "motivo": {
+                "id": 3,
+                "nome": "Sugestão"
+            },
+            "prioridade": {
+                "id": 1,
+                "nome": "Normal"
+            },
+            "date": 1468823423189
+        },
+        {
+            "id": 6,
+            "solicitante": {
+                "id": 4,
+                "nome": "Lara Amorim",
+                "thumb": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHBvaW50ZXItZXZlbnRzPSJub25lIiB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgc3R5bGU9IndpZHRoOiAxMDBweDsgaGVpZ2h0OiAxMDBweDsgYmFja2dyb3VuZC1jb2xvcjogcmdiKDE5MiwgNTcsIDQzKTsiPjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHk9IjUwJSIgeD0iNTAlIiBkeT0iMC4zNWVtIiBwb2ludGVyLWV2ZW50cz0iYXV0byIgZmlsbD0iI2ZmZmZmZiIgZm9udC1mYW1pbHk9IkhlbHZldGljYU5ldWUtTGlnaHQsSGVsdmV0aWNhIE5ldWUgTGlnaHQsSGVsdmV0aWNhIE5ldWUsSGVsdmV0aWNhLCBBcmlhbCxMdWNpZGEgR3JhbmRlLCBzYW5zLXNlcmlmIiBzdHlsZT0iZm9udC13ZWlnaHQ6IG5vcm1hbDsgZm9udC1zaXplOiA0MHB4OyI+TE08L3RleHQ+PC9zdmc+"
+            },
+            "lat": "-15.153287082932412",
+            "lng": "-42.87096977233887",
+            "assunto": "Carro de som não passa na minha rua",
+            "status": {
+                "id": 1,
+                "nome": "Aberto"
+            },
+            "canal": {
+                "id": 3,
+                "nome": "E-mail"
+            },
+            "motivo": {
+                "id": 1,
+                "nome": "Reclamação"
+            },
+            "prioridade": {
+                "id": 0,
+                "nome": "Baixa"
+            },
+            "date": 1468840613564
+        },
+        {
+            "id": 7,
+            "solicitante": {
+                "id": 4,
+                "nome": "Lara Amorim",
+                "thumb": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHBvaW50ZXItZXZlbnRzPSJub25lIiB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgc3R5bGU9IndpZHRoOiAxMDBweDsgaGVpZ2h0OiAxMDBweDsgYmFja2dyb3VuZC1jb2xvcjogcmdiKDE5MiwgNTcsIDQzKTsiPjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHk9IjUwJSIgeD0iNTAlIiBkeT0iMC4zNWVtIiBwb2ludGVyLWV2ZW50cz0iYXV0byIgZmlsbD0iI2ZmZmZmZiIgZm9udC1mYW1pbHk9IkhlbHZldGljYU5ldWUtTGlnaHQsSGVsdmV0aWNhIE5ldWUgTGlnaHQsSGVsdmV0aWNhIE5ldWUsSGVsdmV0aWNhLCBBcmlhbCxMdWNpZGEgR3JhbmRlLCBzYW5zLXNlcmlmIiBzdHlsZT0iZm9udC13ZWlnaHQ6IG5vcm1hbDsgZm9udC1zaXplOiA0MHB4OyI+TE08L3RleHQ+PC9zdmc+"
+            },
+            "lat": "-15.14947611651807",
+            "lng": "-42.86963939666748",
+            "assunto": "Consertar microfone do carro de som principal",
+            "status": {
+                "id": 1,
+                "nome": "Aberto"
+            },
+            "atribuicao": {
+                "id": 1,
+                "nome": "Daiane Soares"
+            },
+            "canal": {
+                "id": 5,
+                "nome": "Presencial"
+            },
+            "motivo": {
+                "id": 1,
+                "nome": "Reclamação"
+            },
+            "prioridade": {
+                "id": 2,
+                "nome": "Urgente"
+            },
+            "date": 1468833613321
+        },
+        {
+            "id": 8,
+            "solicitante": {
+                "id": 4,
+                "nome": "Lara Amorim",
+                "thumb": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHBvaW50ZXItZXZlbnRzPSJub25lIiB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgc3R5bGU9IndpZHRoOiAxMDBweDsgaGVpZ2h0OiAxMDBweDsgYmFja2dyb3VuZC1jb2xvcjogcmdiKDE5MiwgNTcsIDQzKTsiPjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHk9IjUwJSIgeD0iNTAlIiBkeT0iMC4zNWVtIiBwb2ludGVyLWV2ZW50cz0iYXV0byIgZmlsbD0iI2ZmZmZmZiIgZm9udC1mYW1pbHk9IkhlbHZldGljYU5ldWUtTGlnaHQsSGVsdmV0aWNhIE5ldWUgTGlnaHQsSGVsdmV0aWNhIE5ldWUsSGVsdmV0aWNhLCBBcmlhbCxMdWNpZGEgR3JhbmRlLCBzYW5zLXNlcmlmIiBzdHlsZT0iZm9udC13ZWlnaHQ6IG5vcm1hbDsgZm9udC1zaXplOiA0MHB4OyI+TE08L3RleHQ+PC9zdmc+"
+            },
+            "lat": "-15.15262431109539",
+            "lng": "-42.86740779876709",
+            "assunto": "Visitar Família Moreira",
+            "status": {
+                "id": 2,
+                "nome": "Em andamento"
+            },
+            "atribuicao": {
+                "id": 1,
+                "nome": "Daiane Soares"
+            },
+            "canal": {
+                "id": 1,
+                "nome": "Formulário Web"
+            },
+            "motivo": {
+                "id": 1,
+                "nome": "Reclamação"
+            },
+            "prioridade": {
+                "id": 2,
+                "nome": "Urgente"
+            },
+            "date": 1468841125245
+        },
+        {
+            "id": 9,
+            "solicitante": {
+                "id": 4,
+                "nome": "Lara Amorim",
+                "thumb": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHBvaW50ZXItZXZlbnRzPSJub25lIiB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgc3R5bGU9IndpZHRoOiAxMDBweDsgaGVpZ2h0OiAxMDBweDsgYmFja2dyb3VuZC1jb2xvcjogcmdiKDE5MiwgNTcsIDQzKTsiPjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHk9IjUwJSIgeD0iNTAlIiBkeT0iMC4zNWVtIiBwb2ludGVyLWV2ZW50cz0iYXV0byIgZmlsbD0iI2ZmZmZmZiIgZm9udC1mYW1pbHk9IkhlbHZldGljYU5ldWUtTGlnaHQsSGVsdmV0aWNhIE5ldWUgTGlnaHQsSGVsdmV0aWNhIE5ldWUsSGVsdmV0aWNhLCBBcmlhbCxMdWNpZGEgR3JhbmRlLCBzYW5zLXNlcmlmIiBzdHlsZT0iZm9udC13ZWlnaHQ6IG5vcm1hbDsgZm9udC1zaXplOiA0MHB4OyI+TE08L3RleHQ+PC9zdmc+"
+            },
+            "lat": "-15.15204438403487",
+            "lng": "-42.89058208465576",
+            "assunto": "Chuva estragou a estrada e ninguém conserta",
+            "status": {
+                "id": 2,
+                "nome": "Em andamento"
+            },
+            "atribuicao": {
+                "id": 1,
+                "nome": "Daiane Soares"
+            },
+            "canal": {
+                "id": 1,
+                "nome": "Formulário Web"
+            },
+            "motivo": {
+                "id": 4,
+                "nome": "Solicitação"
+            },
+            "prioridade": {
+                "id": 2,
+                "nome": "Urgente"
+            },
+            "date": 1468843613000
+        }
+    ]
+}

@@ -1,0 +1,75 @@
+{
+    "agentes": [
+        {
+            "id": 1,
+            "nome": "Paulo Reis",
+            "thumb": "img/a4.jpg",
+            "status": {
+                "id": 3,
+                "nome": "Online"
+            },
+            "localizacao": {
+                "latitude": null,
+                "longitude": null,
+                "descricao": "São Geraldo"
+            }
+        },
+        
+        {
+            "id": 2,
+            "nome": "Nilton Alexandre",
+            "thumb": "img/a5.jpg",
+            "status": {
+                "id": 3,
+                "nome": "Online"
+            },
+            "localizacao": {
+                "latitude": null,
+                "longitude": null,
+                "descricao": "Pernambuco"
+            }
+        },
+        {
+            "id": 3,
+            "nome": "Felipe Amorim",
+            "thumb": "img/a6.jpg",
+            "status": {
+                "id": 2,
+                "nome": "Ausente"
+            },
+            "localizacao": {
+                "latitude": null,
+                "longitude": null,
+                "descricao": "Centro"
+            }
+        },
+        {
+            "id": 4,
+            "nome": "Gustavo Moreira",
+            "thumb": "img/a7.jpg",
+            "status": {
+                "id": 1,
+                "nome": "Ocupado"
+            },
+            "localizacao": {
+                "latitude": null,
+                "longitude": null,
+                "descricao": "Centro"
+            }
+        },
+        {
+            "id": 5,
+            "nome": "Amorim Reis",
+            "thumb": "img/a8.jpg",
+            "status": {
+                "id": 0,
+                "nome": "Offline"
+            },
+            "localizacao": {
+                "latitude": null,
+                "longitude": null,
+                "descricao": "Comunidade Pajeú"
+            }
+        }
+    ]
+}

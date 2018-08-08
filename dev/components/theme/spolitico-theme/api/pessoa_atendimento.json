@@ -1,0 +1,61 @@
+{
+    "atendimentos": [
+        {
+            "id": 3,
+            "assunto": "Lixo na minha rua a mais de três dias",
+            "dataSolicitacao": "30 minutos atrás",
+            "dataModificação": "6 minutos atrás",
+            "status":{"id":2,"nome":"Em andamento"},
+            "atribuicao":{"id":1,"nome":"Daiane Soares"},
+            "prioridade":{"id":2,"nome":"Urgente"},
+            "canal":{"id":1,"nome":"Formulário Web"},
+            "motivo":{"id":1,"nome":"Reclamação"},
+            "preAssunto":{"id":1,"nome":"Denúncia Irregularidade em obras, pavimentação, reforma"},
+            "gps":1,
+            "anexos":1,
+            "mensagemResumida":"Já faz quase quatro dias que o carro de lixo não passa em minha rua, já liguei na prefeitura 2 vezes e ninguém me deu nenhum retorno. O cheiro está horrível e já tem muitas moscas, é uma situação lamentável para...",
+            "ultimaResposta":{
+                "data":"6 minutos atrás", 
+                "autor":"Daiane Soares", 
+                "mensagem":"Oi Lara tudo bem? Lamentamos o ocorrido e informo que já estamos tomando as providências cabíveis, em breve te comunico por meio deste mesmo atendimento sobre a resolução do problema."}
+        },
+        {
+            "id": 2,
+            "assunto": "Teste de chamado com um texto com vários caracteres para verificar a compatibilidade do layout, inclusive modo mobile. A linha horizontal tem que se adaptar com a classe .text-ellipsis.",
+            "dataSolicitacao": "14/07/2016",
+            "status":{"id":1,"nome":"Aberto"},
+            "atribuicao":{"id":1,"nome":"Daiane Soares"},
+            "prioridade":{"id":0,"nome":"Baixa"},
+            "canal":{"id":1,"nome":"Formulário Web"},
+            "motivo":{"id":3,"nome":"Denúncia"},
+            "preAssunto":{"id":1,"nome":"Denúncia Irregularidade em obras, pavimentação, reforma"},
+            "gps":1,
+            "anexos":1,
+            "mensagemResumida":"Já faz quase quatro dias que o carro de lixo não passa em minha rua, já liguei na prefeitura 2 vezes e ninguém me deu nenhum retorno. O cheiro está horrível e já tem muitas moscas, é uma situação lamentável para...",
+            "ultimaResposta":{
+                "data":"6 minutos atrás", 
+                "autor":"Daiane Soares", 
+                "mensagem":"Oi Lara tudo bem? Lamentamos o ocorrido e informo que já estamos tomando as providências cabíveis, em breve te comunico por meio deste mesmo atendimento sobre a resolução do problema."}
+        },
+        {
+            "id": 1,
+            "assunto": "Taxa de IPTU abusiva",
+            "dataSolicitacao": "14/03/2016",
+            "dataModificação": "16/03/2016s",
+            "status":{"id":100,"nome":"Concluído"},
+            "atribuicao":{"id":1,"nome":"Daiane Soares"},
+            "prioridade":{"id":0,"nome":"Normal"},
+            "canal":{"id":1,"nome":"Formulário Web"},
+            "motivo":{"id":2,"nome":"Crítica"},
+            "preAssunto":{"id":1,"nome":"Denúncia Irregularidade em obras, pavimentação, reforma"},
+            "gps":1,
+            "anexos":1,
+            "mensagemResumida":"Já faz quase quatro dias que o carro de lixo não passa em minha rua, já liguei na prefeitura 2 vezes e ninguém me deu nenhum retorno. O cheiro está horrível e já tem muitas moscas, é uma situação lamentável para...",
+            "ultimaResposta":{
+                "data":"6 minutos atrás", 
+                "autor":"Daiane Soares", 
+                "mensagem":"Oi Lara tudo bem? Lamentamos o ocorrido e informo que já estamos tomando as providências cabíveis, em breve te comunico por meio deste mesmo atendimento sobre a resolução do problema."}
+        }
+        
+    ]
+}

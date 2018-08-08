@@ -1,0 +1,16 @@
+{
+    "grupos": [
+        {
+            "id": 1,
+            "nome": "Atendimento"
+        },
+        {
+            "id": 2,
+            "nome": "Compras"
+        },
+        {
+            "id": 2,
+            "nome": "Conquistadores de Votos"
+        }
+    ]
+}

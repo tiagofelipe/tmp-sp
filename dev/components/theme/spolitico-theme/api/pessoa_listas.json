@@ -1,0 +1,12 @@
+{
+    "listas": [
+        {
+            "id": 1,
+            "nome": "Lista de Exemplo"
+        },
+        {
+            "id": 2,
+            "nome": "Lista de Exemplo 2"
+        }
+    ]
+}

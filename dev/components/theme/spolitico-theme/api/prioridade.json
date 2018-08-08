@@ -1,0 +1,17 @@
+{
+    "prioridades": [
+        {
+            "id": 0,
+            "nome": "Baixa"
+        },
+        {
+            "id": 1,
+            "nome": "Normal",
+            "default": true
+        },
+        {
+            "id": 2,
+            "nome": "Urgente"
+        }
+    ]
+}

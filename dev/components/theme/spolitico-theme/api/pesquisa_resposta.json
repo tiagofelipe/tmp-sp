@@ -1,0 +1,60 @@
+{
+    "pesquisa":
+            {
+                "id": 1,
+                "nome": "Pesquisa do Eleitorado",
+                "tipo": {
+                    "id": 2,
+                    "nome": "Pública"
+                },
+                "link": "http://i0.spolitico.com/publico/pesquisa1",
+                "stats": {
+                    "respostas": 1589,
+                    "abertos": 2649,
+                    "incompletos": 27,
+                    "cadastros": 1616,
+                    "localizacoes": 867
+                },
+                "status": {
+                    "id": 100,
+                    "nome": "Ativa"
+                },
+                "dataInicio": 1468893959123,
+                "totalPerguntas": 2,
+                "perguntas": [
+                    {
+                        "id": 1,
+                        "titulo": "Teste"
+                    }
+                ]
+            },
+    "resposta":
+            {
+                "id": 1,
+                "pessoa": {
+                    "id": 1,
+                    "nome": "Daiane Soares",
+                    "idade": "19 anos",
+                    "eleitor": {
+                        "voto": 1,
+                        "colaborador": true
+                    },
+                    "rate": 4
+                },
+                "agente": {
+                    "id": 2,
+                    "nome": "Alceno Moreira",
+                    "thumb": "img/a9.jpg"
+                },
+                "status": {
+                    "id": 100,
+                    "nome": "Concluído"
+                },
+                "respostas": {
+                    "respondido": 2
+                },
+                "dataAbertura": 1468593959123,
+                "dataInicio": 1468893959123,
+                "dataTermino": 1468999959123
+            }
+}

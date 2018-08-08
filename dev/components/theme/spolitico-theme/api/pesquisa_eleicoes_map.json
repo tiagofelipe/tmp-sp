@@ -1,0 +1,109 @@
+{
+    "eleitores": [
+        {
+            "id": 3,
+            "pessoa": {
+                "id": 1,
+                "nome": "Edson Amorim",
+                "thumb": "img/edson.jpg",
+                "info": "49 anos"
+            },
+            "lat": "-15.167275",
+            "lng": "-42.821109",
+            "pesquisa": {
+              "id": 1,
+              "nome": "Pesquisa Eleitoral 2016"
+            },
+            "anexos": {
+                "video": 1,
+                "audio": 0
+            },
+            "voto": {
+                "status": 1
+            }
+        },
+        
+        {
+            "id": 4,
+            "pessoa": {
+                "id": 2,
+                "nome": "Lara Moreira Reis",
+                "info": "18 anos"
+            },
+            "lat": "-15.148481940078748",
+            "lng": "-42.87161350250244",
+            "pesquisa": {
+              "id": 1,
+              "nome": "Pesquisa Eleitoral 2016"
+            },
+            "anexos": {
+                "video": 1,
+                "audio": 1
+            },
+            "voto": {
+                "status": 0
+            }
+        },
+        {
+            "id": 5,
+            "pessoa": {
+                "id": 3,
+                "nome": "Felipe Amorim",
+                "info": "27 anos, casado, mora com a família e 2 filhos"
+            },
+            "lat": "-15.146617846667441",
+            "lng": "-42.87714958190918",
+            "pesquisa": {
+              "id": 1,
+              "nome": "Pesquisa Eleitoral 2016"
+            },
+            "anexos": {
+                "audio": 1
+            },
+            "voto": {
+                "status": 3
+            }
+        },
+        {
+            "id": 6,
+            "pessoa": {
+                "id": 3,
+                "nome": "Ana Moreira",
+                "info": "32 anos, casada, mora com a família. 2 filhos"
+            },
+            "lat": "-15.154322659771136",
+            "lng": "-42.868995666503906",
+            "pesquisa": {
+              "id": 1,
+              "nome": "Pesquisa Eleitoral 2016"
+            },
+            "anexos": {
+                "audio": 1
+            },
+            "voto": {
+                "status": 3
+            }
+        },
+        {
+            "id": 7,
+            "pessoa": {
+                "id": 3,
+                "nome": "João Alencar",
+                "info": "19 anos"
+            },
+            "lat": "-15.155233963195876",
+            "lng": "-42.87363052368164",
+            "pesquisa": {
+              "id": 1,
+              "nome": "Pesquisa Eleitoral 2016"
+            },
+            "anexos": {
+                "audio": 1
+            },
+            "voto": {
+                "status": 1
+            }
+        }
+        
+    ]
+}

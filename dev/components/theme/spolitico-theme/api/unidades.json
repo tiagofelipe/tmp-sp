@@ -1,0 +1,28 @@
+{
+    "unidades": [
+        {
+            "id": 1,
+            "nome": "Obras"
+        },
+        {
+            "id": 2,
+            "nome": "Pavimentação"
+        },
+        {
+            "id": 3,
+            "nome": "Gabinete"
+        },
+        {
+            "id": 4,
+            "nome": "Marketing"
+        },
+        {
+            "id": 5,
+            "nome": "Ouvidoria Geral"
+        },
+        {
+            "id": 6,
+            "nome": "Assessoria"
+        }
+    ]
+}
