@@ -1,3 +1,27 @@
+<script>
+    import UAlert from "../../../../../src/components/alert/UAlert"
+    import pesquisa from "../api/pesquisas.json"
+    export default {
+        name: "tempoReal",
+        components: {UAlert},
+        props: ['name'],
+        data: function () {
+            return {
+                mapName: this.name + "-map",
+            }
+        },
+        mounted: function () {
+            console.log(pesquisa)
+            const element = document.getElementById(this.mapName)
+            const options = {
+                zoom: 14,
+                center: new google.maps.LatLng(-15.7801,-47.9292)
+            }
+            const map = new google.maps.Map(element, options);
+        }
+    }
+</script>
+
 <google-map name="example">
 </google-map>
 
@@ -17,7 +41,6 @@
             </div>
         </div>
         </div>
-
         <div class="row foot">
         <u-alert color="light-blue" class="col altura">
             <small class="text-white block m-l"> Votos a Favor</small>
@@ -43,27 +66,7 @@
 
     </div>
 </template>
-<script>
-    import UAlert from "../../../../../src/components/alert/UAlert";
-    export default {
-        name: "tempoReal",
-        components: {UAlert},
-        props: ['name'],
-        data: function () {
-            return {
-                mapName: this.name + "-map",
-            }
-        },
-        mounted: function () {
-            const element = document.getElementById(this.mapName)
-            const options = {
-                zoom: 14,
-                center: new google.maps.LatLng(-15.7801,-47.9292)
-            }
-            const map = new google.maps.Map(element, options);
-        }
-    }
-</script>
+
 
 <style scoped>
 
