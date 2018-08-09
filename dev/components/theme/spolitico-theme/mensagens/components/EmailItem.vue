@@ -17,8 +17,8 @@
 </script>
 
 <template>
-  <u-item>
-    <u-item-side class="avatar thumb pull-left m-r" href="#">
+  <u-item class>
+    <u-item-side class="avatar thumb">
       <img src="../assets/user-default.png">
     </u-item-side>
     <u-item-main>
