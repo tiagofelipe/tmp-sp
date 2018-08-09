@@ -1,13 +1,29 @@
 <script>
-  export default {
-    name: 'Main'
+  // import _base from '../../_default/components/_base.vue'
+  import CHeader from './components/Header.vue'
+  import UPageContainer from '../../../../../src/components/layout/UPageContainer'
+
+  export default{
+    name: 'Contatos',
+    // extends: _base,
+    data () {
+      return {}
+    },
+    computed: {},
+    mounted () {
+//      this._menuFolded(true)
+    },
+    destroyed () {},
+    methods: {},
+    components: {UPageContainer, CHeader}
   }
 </script>
 
 <template>
-    <router-view></router-view>
+    <u-layout>
+        <u-page-container>
+            <!--CHeader/>-->
+            <router-view></router-view>
+        </u-page-container>
+    </u-layout>
 </template>
-
-<style scoped>
-
-</style>
