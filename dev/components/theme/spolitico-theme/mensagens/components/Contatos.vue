@@ -47,7 +47,7 @@
     <div class="u-flex">
       <div class="">
         <div class="wrapper">
-          <u-btn tag="u-btn" color="negative" @click="$router.push({name: 'novo-email'})">Escrever</u-btn>
+          <u-btn tag="u-btn" color="negative" @click.native="$router.push({name: 'novo-email'})">Escrever</u-btn>
         </div>
         <div class="wrapper hidden-sm hidden-xs" id="email-menu">
           <u-list>

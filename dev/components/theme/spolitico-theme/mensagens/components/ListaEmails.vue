@@ -81,7 +81,7 @@
         }
       }
     },
-    mounted () {
+    beforeMount () {
       this.getEmails()
     },
     destroyed () {
@@ -90,21 +90,9 @@
       getEmails () {
         this.isLoading = true
         setTimeout(() => {
-          /* let mail = {
-            id: 1,
-            data: new Date(),
-            assunto: 'Teste Local',
-            mensagem: 'Allons-y!',
-            lido: true,
-            isExcluido: false,
-            isRespondido: false
-          } */
-          let id = 0
-          let mails = listMails
-          this.lista = mails
-          this.listatmp = this.lista
+          this.listatmp = this.lista = listMails
           this.isLoading = false
-        }, 1000)
+        }, 100)
         /* ContatoService.getEmails()
           .then(result => {
             this.lista = Array.isArray(result.data) ? result.data : [result.data]

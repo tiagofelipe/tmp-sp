@@ -1,6 +1,9 @@
 <script>
   // import ContatoService from '../../../../domain/contato/service/contato'
   import { isEmpty } from 'lodash'
+  import UIcon from '../../../../../../src/components/icon/Icon'
+  import UBtn from '../../../../../../src/components/button/UBtn'
+  import UEditor from '../../../../../../src/components/editor/UEditor'
 
   export default{
     name: 'novo-email',
@@ -50,18 +53,18 @@
           })
       }
     },
-    components: {}
+    components: {UEditor, UBtn, UIcon}
   }
 </script>
 
 <template>
   <div>
     <!-- header -->
-    <div class="wrapper bg-light lter b-b">
-      <div class="btn-group m-r-sm">
-        <a href class="btn btn-sm btn-default w-xxs w-auto-xs" tooltip="Save"><i class="fa fa-file"></i></a>
-        <router-link :to="{ name: 'contatos' }" class="btn btn-sm btn-default w-xxs w-auto-xs" tooltip="Discard"><i class="fa fa-trash-o"></i></router-link>
-      </div>
+    <div class="wrapper lter b-b">
+      <u-btn-group class="m-r-sm">
+        <u-btn color="white"><i class=" fa fa-file"></i></u-btn>
+        <u-btn @click="$router.push({ name: 'contatos' })" color="white"><i class="fa fa-trash"></i></u-btn>
+      </u-btn-group>
     </div>
     <span class="msg" v-if="confirmMsg">Mensagem enviada</span>
     <span class="msg-error" v-if="hasError && !confirmMsg">Houve um problema ao enviar este e-mail. <a @click="sendNewEmail()" style="text-decoration: underline">Tentar novamente</a></span>
@@ -69,22 +72,22 @@
     <div class="wrapper">
       <form name="newMail" class="form-horizontal m-t-lg">
         <div class="form-group">
-          <label class="col-lg-2 control-label">Para:</label>
+          <label class="col-lg-2">Para:</label>
           <div class="col-lg-8">
             <!--select ui-jq="chosen" data-placeholder="Escolha um email" class="form-control" multiple>
               <option value="">TODO: lista de emails já registrados</option>
             </select -->
-            <input type="email" class="form-control" v-model="mail.destinatario">
+            <u-input type="email" class="form-control" v-model="mail.destinatario"></u-input>
           </div>
         </div>
         <div class="form-group">
-          <label class="col-lg-2 control-label">Assunto:</label>
+          <label class="col-lg-2">Assunto:</label>
           <div class="col-lg-8">
-            <input type="text" class="form-control" v-model="mail.assunto">
+            <u-input type="text" class="form-control" v-model="mail.assunto"></u-input>
           </div>
         </div>
         <div class="form-group">
-          <label class="col-sm-2 control-label">Mensagem</label>
+          <label class="col-sm-2">Mensagem</label>
           <div class="col-sm-10">
             <!--div class="btn-toolbar m-b-sm btn-editor" data-role="editor-toolbar" data-target="#editor">
               <div class="btn-group dropdown">
@@ -120,9 +123,9 @@
                 <a class="btn btn-sm btn-default" data-edit="justifyright" tooltip="Align Right (Ctrl/Cmd+R)"><i class="fa text-base fa-align-right"></i></a>
                 <a class="btn btn-sm btn-default" data-edit="justifyfull" tooltip="Justify (Ctrl/Cmd+J)"><i class="fa text-base fa-align-justify"></i></a>
               </div>
-            </div-->
-            <textarea class="form-control h-auto" style="min-height:200px;min-width: 100%" v-model="mail.mensagem">
-            </textarea>
+            </div>
+            <textarea class="form-control h-auto" style="min-height:200px;min-width: 100%" v-model="mail.mensagem"></textarea-->
+            <u-editor v-model="mail.mensagem"></u-editor>
           </div>
         </div>
         <div class="form-group">
@@ -149,5 +152,8 @@
     padding: 5px 15px;
     display: block;
     text-align: center;
+  }
+  i {
+    color: black;
   }
 </style>

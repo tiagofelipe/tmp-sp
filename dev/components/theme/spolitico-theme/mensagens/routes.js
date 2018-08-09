@@ -18,8 +18,8 @@ export default [
         redirect: { name: 'lista-emails' },
         children: [
           {path: '', component: ListaEmails, name: 'lista-emails'},
-          {path: '/atendimento/:id', component: Email, name: 'view-email'},
-          {path: '/novo-email', component: NovoEmail, name: 'novo-email'}
+          {path: 'atendimento/:id', component: Email, name: 'view-email'},
+          {path: 'atendimento/novo-email', component: NovoEmail, name: 'novo-email'}
         ]
       }
     ]
