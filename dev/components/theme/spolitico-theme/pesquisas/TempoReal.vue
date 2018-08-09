@@ -15,7 +15,7 @@
             const element = document.getElementById(this.mapName)
             const options = {
                 zoom: 14,
-                center: new google.maps.LatLng(-15.7801,-47.9292)
+                center: new google.maps.LatLng(-15.148481940078748,-42.87161350250244)
             }
             const map = new google.maps.Map(element, options);
             for(let pesq of pesquisa.eleitores){
