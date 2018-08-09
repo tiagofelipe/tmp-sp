@@ -1,6 +1,6 @@
 <script>
     import UAlert from "../../../../../src/components/alert/UAlert"
-    import pesquisa from "../api/pesquisas.json"
+    import pesquisa from "../api/pesquisa_eleicoes_map.json"
     export default {
         name: "tempoReal",
         components: {UAlert},
@@ -10,14 +10,35 @@
                 mapName: this.name + "-map",
             }
         },
-        mounted: function () {
-            console.log(pesquisa)
+        mounted() {
+            console.log(pesquisa.eleitores)
             const element = document.getElementById(this.mapName)
             const options = {
                 zoom: 14,
-                center: new google.maps.LatLng(-15.7801,-47.9292)
+                center: new google.maps.LatLng(-15.148481940078748,-42.87161350250244)
             }
             const map = new google.maps.Map(element, options);
+            for(let pesq of pesquisa.eleitores){
+                let icone = ''
+                switch (pesq.voto.status){
+                    case 1:
+                        icone = ''
+                        break
+                    case 2:
+                         icone = 'https://maps.google.com/mapfiles/kml/shapes/parking_lot_maps.png'
+                        break
+                    case 3:
+                         icone = 'https://maps.google.com/mapfiles/kml/shapes/parking_lot_maps.png'
+                        break
+                    case 0:
+                         icone = 'https://maps.google.com/mapfiles/kml/shapes/parking_lot_maps.png'
+                }
+                var marker = new google.maps.Marker({
+                    map: map,
+                    position: new google.maps.LatLng(pesq.lat,pesq.lng),
+                    icon: icone,}
+                )
+            }
         }
     }
 </script>
