@@ -1,6 +1,6 @@
 <script>
-    import UAlert from "../../../../../src/components/alert/UAlert"
-    import pesquisa from "../api/pesquisa_eleicoes_map.json"
+    import UAlert from "../../../../../../src/components/alert/UAlert"
+    import pesquisa from "../../api/pesquisa_eleicoes_map.json"
     const VOTO_CONQUISTADO = 0, INDECISO =1, NAO_RESPONDIDO=2, PERDIDO=3
     export default {
     name: "pesquisa",
@@ -18,11 +18,25 @@
     }
 </script>
 
-<google-map name="example">
-</google-map>
 
 <template>
+    <!-- esse código está no em header.vue caso queira adaptar -->
+    <div style="margin: 12px">
+        <div class="bg-white b-b wrapper-md">
+            <div class="row">
+                <div class="col-md-3 col-sm-6 col-xs-7">
+                    <div class="m-t-sm">Administração de Contatos</div>
+                </div>
+                <div class="col-md-9 col-sm-6 col-xs-5">
 
+                </div>
+            </div>
+        </div>
+        <u-alert color="dark">
+            Some cool message
+        </u-alert>
+
+    </div>
 
 </template>
 

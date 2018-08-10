@@ -1,6 +1,6 @@
 <script>
-    import UAlert from "../../../../../src/components/alert/UAlert"
-    import pesquisa from "../api/pesquisa_eleicoes_map.json"
+    import UAlert from "../../../../../../src/components/alert/UAlert"
+    import pesquisa from "../../api/pesquisa_eleicoes_map.json"
     const VOTO_CONQUISTADO = 0, INDECISO =1, NAO_RESPONDIDO=2, PERDIDO=3
     export default {
     name: "tempoReal",

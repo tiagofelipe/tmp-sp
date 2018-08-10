@@ -1,12 +1,23 @@
+import pesquisa from './components/Pesquisa'
+import mapa from './components/TempoReal'
+import Main from './Main'
 export default [
   {
     path: '/pesquisas',
     name: 'pesquisas',
-    component: () => import('./TempoReal'),
-    children: [{
-      path: 'mapa',
-      name: 'mapapesquisas',
-      component: () => import('./Pesquisa')
-    }]
+    component: Main,
+    redirect: { name: 'pesquisa' },
+    children: [
+      {
+        path: '',
+        component: pesquisa,
+        name: 'pesquisa'
+      },
+      {
+        path: 'mapa',
+        component: mapa,
+        name: 'mapapesquisas'
+      }
+    ]
   }
 ]
