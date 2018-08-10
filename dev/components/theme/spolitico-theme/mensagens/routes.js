@@ -18,10 +18,36 @@ export default [
         redirect: { name: 'lista-emails' },
         children: [
           {path: '', component: ListaEmails, name: 'lista-emails'},
-          {path: '/atendimento/:id', component: Email, name: 'view-email'},
-          {path: '/novo-email', component: NovoEmail, name: 'novo-email'}
+          {path: 'atendimento/:id', component: Email, name: 'view-email'},
+          {path: 'atendimento/novo-email', component: NovoEmail, name: 'novo-email'}
         ]
       }
     ]
   }
 ]
+/* import Main from './Main.vue'
+import Contatos from './components/Contatos.vue'
+import ListaEmails from './components/ListaEmails.vue'
+import NovoEmail from './components/NovoEmail.vue'
+import Email from './components/Email.vue'
+
+export default [{
+  path: 'atendimentos',
+  name: 'contatos',
+  component: Main,
+  children: [
+    {
+      path: '/',
+      component: Contatos,
+      name: 'contatos',
+      redirect: { name: 'lista-emails' },
+      children: [
+        {path: '', component: ListaEmails, name: 'lista-emails'},
+        {path: '/atendimento/:id', component: Email, name: 'view-email'},
+        {path: '/novo-email', component: NovoEmail, name: 'novo-email'}
+      ]
+    }
+  ]
+}
+]
+*/

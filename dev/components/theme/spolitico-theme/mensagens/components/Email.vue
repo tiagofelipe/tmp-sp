@@ -4,6 +4,7 @@
   import { isEmpty } from 'lodash'
   import listMails from '../mailFactory'
   import UTooltip from '../../../../../../src/components/tooltip/UTooltip'
+  import UBtn from '../../../../../../src/components/button/UBtn'
 
   export default{
     name: 'email-detail',
@@ -25,6 +26,7 @@
           remetente: '',
           mensagem: ''
         },
+        isLoading: false,
         isDeleting: false,
         hasError: false,
         isContesting: false,
@@ -43,11 +45,13 @@
         return !isEmpty(this.resposta.remetente) && !isEmpty(this.resposta.mensagem)
       }
     },
-    created () {
+    beforeMount () {
       this.getEmail()
       this.$nextTick(() => {
         this.setLido()
       })
+    },
+    mounted () {
     },
     destroyed () {
       this.mail = {}
@@ -55,6 +59,7 @@
     },
     methods: {
       getEmail () {
+        this.isLoading = true
         /* ContatoService.showEmail(this.idEmail)
           .then(result => {
             this.mail = result.data
@@ -67,7 +72,7 @@
         })
         // todo: solução paliativa para caso haja refresh da página
         if (typeof mail[0] !== 'undefined') {
-          this.mail = mail
+          this.mail = mail[0]
         }
       },
       deleteEmail () {
@@ -109,7 +114,7 @@
         // ContatoService.setLido(this.idEmail)
       }
     },
-    components: {UTooltip}
+    components: {UBtn, UTooltip}
   }
 </script>
 
@@ -118,12 +123,12 @@
     <!-- header -->
     <div class="wrapper">
       <u-btn @click="$router.push({ name: 'lista-emails' })" color="white" size="sm"><i class="fa fa-long-arrow-left"></i></u-btn>
-      <u-btn-group>
-        <u-btn size="sm" color="white" icon="archive"><i class="fa fa-archive"></i></u-btn>
+      <u-btn-group class="m-l">
+        <u-btn size="sm" color="white"><i class="fa fa-archive"></i></u-btn>
         <u-btn size="sm" color="white"><i class="fa fa-exclamation-circle"></i></u-btn>
         <u-btn size="sm" color="white" @click="deleteEmail()"><i class="fa fa-trash"></i></u-btn>
       </u-btn-group>
-      <u-btn-group>
+      <u-btn-group class="m-l">
         <u-btn-dropdown icon="folder">
           <u-list link>
             <u-item>
@@ -146,6 +151,7 @@
     <span class="msg"v-if="isDeleting">Excluindo...</span>
     <span class="msg-error" v-else-if="hasError">Houve um problema ao excluir este e-mail</span>
     <!-- / header -->
+
     <div class="wrapper b-b">
       <h2 class="font-thin m-n">{{ mail.assunto }}</h2>
     </div>
