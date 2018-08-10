@@ -43,14 +43,14 @@
 </script>
 
 <template>
-  <u-page>
+  <u-page class="bg-blue-grey-1">
     <div class="u-flex">
-      <div class="">
-        <div class="wrapper">
-          <u-btn tag="u-btn" color="negative" @click.native="$router.push({name: 'novo-email'})">Escrever</u-btn>
+      <div class="bg-grey-3">
+        <div class="wrapper mail-toolbar b">
+          <u-btn tag="u-btn" size="sm" no-caps color="negative" @click.native="$router.push({name: 'novo-email'})">Escrever</u-btn>
         </div>
-        <div class="wrapper hidden-sm hidden-xs" id="email-menu">
-          <u-list>
+        <div class="wrapper hidden-sm hidden-xs bg-grey-4" style="height: 90vh;" id="email-menu">
+          <u-list class="no-border">
             <u-item link @click.native="filterEmails('todos')" :class="{ active: filtro === 'todos'}">
               <u-item-main>
                 <u-item-tile label>Entrada</u-item-tile>
@@ -77,25 +77,25 @@
               </u-item-main>
             </u-item>
             <u-list-header class="wrapper">Marcadores</u-list-header>
-            <u-item link>
+            <u-item link @click.native="filterEmails('campanhas')" :class="{ active: filtro === 'campanhas'}">
               <u-item-side><i class="fa fa-fw fa-circle text-primary"></i></u-item-side>
               <u-item-main>
                 <u-item-tile label>Campanha</u-item-tile>
               </u-item-main>
             </u-item>
-            <u-item link>
+            <u-item link @click.native="filterEmails('eleitores')" :class="{ active: filtro === 'eleitores'}">
               <u-item-side><i class="fa fa-fw fa-circle text-info"></i></u-item-side>
               <u-item-main>
                 <u-item-tile label>Eleitores</u-item-tile>
               </u-item-main>
             </u-item>
-            <u-item link>
+            <u-item link @click.native="filterEmails('agentes')" :class="{ active: filtro === 'agentes'}">
               <u-item-side><i class="fa fa-fw fa-circle text-warning"></i></u-item-side>
               <u-item-main>
                 <u-item-tile label>Agentes</u-item-tile>
               </u-item-main>
             </u-item>
-            <u-item link>
+            <u-item link @click.native="filterEmails('pesquisas')" :class="{ active: filtro === 'pesquisas'}">
               <u-item-side><i class="fa fa-fw fa-circle text-success"></i></u-item-side>
               <u-item-main>
                 <u-item-tile label>Pesquisas</u-item-tile>
@@ -120,3 +120,13 @@
     </div>
   </u-page>
 </template>
+
+<style scoped>
+  .active {
+    background-color: #23b7e5;
+    color: #fff !important;
+  }
+  .no-border {
+    border: none !important;
+  }
+</style>
