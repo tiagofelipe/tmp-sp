@@ -93,8 +93,6 @@
           this.listatmp = this.naorespondidos
         } else if (f === 'respondidos') {
           this.listatmp = this.respondidos
-        } else if (f === 'lixeira') {
-          this.listatmp = this.excluidos
         } else if (f === 'todos') {
           this.listatmp = this.todos
         } else if (f === 'campanhas') {
