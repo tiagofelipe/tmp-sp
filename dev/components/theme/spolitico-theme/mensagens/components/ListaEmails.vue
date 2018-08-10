@@ -119,7 +119,7 @@
   <div class="col">
     <div>
       <!-- header -->
-      <div class="wrapper">
+      <div class="wrapper mail-toolbar">
         <div class="row">
           <div class="col-md-4">
             <!--div class="btn-group dropdown">
@@ -138,15 +138,15 @@
             </div>
           </div>
           <u-btn-group class="col-md-1 offset-md-7">
-            <u-btn color="primary" type="button" style="float: right;"><i class="fa fa-chevron-left"></i></u-btn>
-            <u-btn color="primary" type="button"><i class="fa fa-chevron-right"></i></u-btn>
+            <u-btn color="primary" size="sm" type="button" style="float: right;"><i class="fa fa-chevron-left"></i></u-btn>
+            <u-btn color="primary" size="sm" type="button"><i class="fa fa-chevron-right"></i></u-btn>
           </u-btn-group>
         </div>
       </div>
       <!-- / header -->
       <div class="msg" v-if="isLoading">Carregando...</div>
       <div class="msg" v-else-if="listatmp.length < 1">Nenhum e-mail a ser mostrado</div>
-      <u-list class="no-border" v-else>
+      <u-list class="no-border" style="margin-top: -8px;" v-else>
         <item-email :mail="mail" v-for="mail in listatmp" :key="mail.id"></item-email>
       </u-list>
     </div>

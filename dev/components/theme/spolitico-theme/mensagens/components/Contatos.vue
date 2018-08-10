@@ -43,13 +43,13 @@
 </script>
 
 <template>
-  <u-page>
+  <u-page class="bg-blue-grey-1">
     <div class="u-flex">
-      <div class="">
-        <div class="wrapper">
-          <u-btn tag="u-btn" color="negative" @click.native="$router.push({name: 'novo-email'})">Escrever</u-btn>
+      <div class="bg-grey-3">
+        <div class="wrapper mail-toolbar b">
+          <u-btn tag="u-btn" size="sm" no-caps color="negative" @click.native="$router.push({name: 'novo-email'})">Escrever</u-btn>
         </div>
-        <div class="wrapper hidden-sm hidden-xs" id="email-menu">
+        <div class="wrapper hidden-sm hidden-xs bg-grey-4" style="height: 90vh;" id="email-menu">
           <u-list class="no-border">
             <u-item link @click.native="filterEmails('todos')" :class="{ active: filtro === 'todos'}">
               <u-item-main>

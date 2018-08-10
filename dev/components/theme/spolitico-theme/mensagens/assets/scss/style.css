@@ -6,3 +6,7 @@ body {
   color: #58666e;
   background-color: transparent;
 }
+
+.mail-toolbar {
+  height: 55px;
+}
