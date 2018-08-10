@@ -4,8 +4,9 @@ export default [
     name: 'pesquisas',
     component: () => import('./TempoReal'),
     children: [{
-      path: '/',
-      name: 'mapapesquisas'
+      path: 'mapa',
+      name: 'mapapesquisas',
+      component: () => import('./Pesquisa')
     }]
   }
 ]
