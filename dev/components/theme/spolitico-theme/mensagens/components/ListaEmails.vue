@@ -57,6 +57,26 @@
           return item.isExcluido === false
         })
       },
+      campanhas () {
+        return this.lista.filter(item => {
+          return item.tag.name === 'campanhas'
+        })
+      },
+      eleitores () {
+        return this.lista.filter(item => {
+          return item.tag.name === 'eleitores'
+        })
+      },
+      agentes () {
+        return this.lista.filter(item => {
+          return item.tag.name === 'agentes'
+        })
+      },
+      pesquisas () {
+        return this.lista.filter(item => {
+          return item.tag.name === 'pesquisas'
+        })
+      },
       filtro () {
         return this.$route.query.filter
       }
@@ -78,6 +98,14 @@
           this.listatmp = this.excluidos
         } else if (f === 'todos') {
           this.listatmp = this.todos
+        } else if (f === 'campanhas') {
+          this.listatmp = this.campanhas
+        } else if (f === 'eleitores') {
+          this.listatmp = this.eleitores
+        } else if (f === 'agentes') {
+          this.listatmp = this.agentes
+        } else if (f === 'pesquisas') {
+          this.listatmp = this.pesquisas
         }
       }
     },

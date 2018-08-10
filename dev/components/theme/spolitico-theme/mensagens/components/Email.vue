@@ -185,8 +185,8 @@
           </div>
           <textarea class="wrapper" style="min-height:100px; min-width: 100%; border: none" v-model="resposta.mensagem"></textarea>
           <div class="panel-footer bg-light lt">
-            <u-btn class="pull-right" icon="trash" @click="excluiResposta()">t</u-btn>
-            <u-btn color="primary" @click="respondeEmail()" :disabled="isContesting || !isValid">{{ isContesting ? 'Enviando...' : 'Enviar' }}</u-btn>
+            <u-btn class="pull-right" icon="trash" icon-type="fa" size="sm" @click="excluiResposta()"></u-btn>
+            <u-btn color="primary" size="sm" @click="respondeEmail()" :disabled="isContesting || !isValid">{{ isContesting ? 'Enviando...' : 'Enviar' }}</u-btn>
           </div>
         </div>
       </div>

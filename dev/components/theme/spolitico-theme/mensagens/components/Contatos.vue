@@ -77,25 +77,25 @@
               </u-item-main>
             </u-item>
             <u-list-header class="wrapper">Marcadores</u-list-header>
-            <u-item link>
+            <u-item link @click.native="filterEmails('campanhas')" :class="{ active: filtro === 'campanhas'}">
               <u-item-side><i class="fa fa-fw fa-circle text-primary"></i></u-item-side>
               <u-item-main>
                 <u-item-tile label>Campanha</u-item-tile>
               </u-item-main>
             </u-item>
-            <u-item link>
+            <u-item link @click.native="filterEmails('eleitores')" :class="{ active: filtro === 'eleitores'}">
               <u-item-side><i class="fa fa-fw fa-circle text-info"></i></u-item-side>
               <u-item-main>
                 <u-item-tile label>Eleitores</u-item-tile>
               </u-item-main>
             </u-item>
-            <u-item link>
+            <u-item link @click.native="filterEmails('agentes')" :class="{ active: filtro === 'agentes'}">
               <u-item-side><i class="fa fa-fw fa-circle text-warning"></i></u-item-side>
               <u-item-main>
                 <u-item-tile label>Agentes</u-item-tile>
               </u-item-main>
             </u-item>
-            <u-item link>
+            <u-item link @click.native="filterEmails('pesquisas')" :class="{ active: filtro === 'pesquisas'}">
               <u-item-side><i class="fa fa-fw fa-circle text-success"></i></u-item-side>
               <u-item-main>
                 <u-item-tile label>Pesquisas</u-item-tile>

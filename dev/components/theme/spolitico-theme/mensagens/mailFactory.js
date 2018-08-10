@@ -1,5 +1,5 @@
 const tagColors = {
-  campanha: { color: '#0081ff', name: 'campanha' },
+  campanha: { color: '#0081ff', name: 'campanhas' },
   eleitores: { color: '#7266ba', name: 'eleitores' },
   agentes: { color: '#f2c037', name: 'agentes' },
   pesquisas: { color: '#27c24c', name: 'pesquisas' },
