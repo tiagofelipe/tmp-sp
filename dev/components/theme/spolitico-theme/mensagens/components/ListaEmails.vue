@@ -92,7 +92,7 @@
         setTimeout(() => {
           this.listatmp = this.lista = listMails
           this.isLoading = false
-        }, 100)
+        }, 500)
         /* ContatoService.getEmails()
           .then(result => {
             this.lista = Array.isArray(result.data) ? result.data : [result.data]
@@ -146,7 +146,7 @@
       <!-- / header -->
       <div class="msg" v-if="isLoading">Carregando...</div>
       <div class="msg" v-else-if="listatmp.length < 1">Nenhum e-mail a ser mostrado</div>
-      <u-list v-else>
+      <u-list class="no-border" v-else>
         <item-email :mail="mail" v-for="mail in listatmp" :key="mail.id"></item-email>
       </u-list>
     </div>
@@ -160,5 +160,8 @@
   .msg {
     margin-left: 40%;
     margin-top: 50px;
+  }
+  .no-border {
+    border: none !important;
   }
 </style>

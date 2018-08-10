@@ -50,7 +50,7 @@
           <u-btn tag="u-btn" color="negative" @click.native="$router.push({name: 'novo-email'})">Escrever</u-btn>
         </div>
         <div class="wrapper hidden-sm hidden-xs" id="email-menu">
-          <u-list>
+          <u-list class="no-border">
             <u-item link @click.native="filterEmails('todos')" :class="{ active: filtro === 'todos'}">
               <u-item-main>
                 <u-item-tile label>Entrada</u-item-tile>
@@ -120,3 +120,13 @@
     </div>
   </u-page>
 </template>
+
+<style scoped>
+  .active {
+    background-color: #23b7e5;
+    color: #fff !important;
+  }
+  .no-border {
+    border: none !important;
+  }
+</style>
