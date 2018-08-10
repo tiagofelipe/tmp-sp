@@ -112,6 +112,7 @@
       },
       setLido () {
         // ContatoService.setLido(this.idEmail)
+        console.log('E-mail lido!')
       }
     },
     components: {UBtn, UTooltip}
@@ -122,14 +123,14 @@
   <div>
     <!-- header -->
     <div class="wrapper">
-      <u-btn @click="$router.push({ name: 'lista-emails' })" color="white" size="sm"><i class="fa fa-long-arrow-left"></i></u-btn>
+      <u-btn @click="$router.push({ name: 'lista-emails' })" icon="long-arrow-left" icon-type="fa" size="sm"></u-btn>
       <u-btn-group class="m-l">
-        <u-btn size="sm" color="white"><i class="fa fa-archive"></i></u-btn>
-        <u-btn size="sm" color="white"><i class="fa fa-exclamation-circle"></i></u-btn>
-        <u-btn size="sm" color="white" @click="deleteEmail()"><i class="fa fa-trash"></i></u-btn>
+        <u-btn size="sm" icon="archive" icon-type="fa"></u-btn>
+        <u-btn size="sm" icon="exclamation-circle" icon-type="fa"></u-btn>
+        <u-btn size="sm" icon="trash" icon-type="fa" @click="deleteEmail()"></u-btn>
       </u-btn-group>
       <u-btn-group class="m-l">
-        <u-btn-dropdown icon="folder">
+        <u-btn-dropdown icon="folder" size="sm">
           <u-list link>
             <u-item>
               <u-item-main>Lixeira</u-item-main>
@@ -139,7 +140,7 @@
             </u-item>
           </u-list>
         </u-btn-dropdown>
-        <u-btn-dropdown label="marcar">
+        <u-btn-dropdown icon="tag" icon-type="fa"  size="sm">
           <u-list link>
             <u-item>
               <u-item-main>Marcar</u-item-main>
@@ -208,8 +209,5 @@
     text-align: center;
     color: #fff;
     font-weight: bold;
-  }
-  i {
-    color: #000;
   }
 </style>

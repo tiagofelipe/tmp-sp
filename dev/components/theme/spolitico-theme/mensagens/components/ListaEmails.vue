@@ -16,8 +16,7 @@
         options: [
           {value:null, label: 'Filtrar por'},
           {value:'lidos', label: 'Lidos'},
-          {value:'naolidos', label: 'Não lidos'},
-          {value:'todos', label: 'Todos'}
+          {value:'naolidos', label: 'Não lidos'}
         ]
       }
     },

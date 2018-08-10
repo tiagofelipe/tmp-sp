@@ -1,5 +1,6 @@
 <script>
   import UItemSide from '../../../../../../src/components/list/UItemSide'
+  import moment from 'moment'
 
   export default{
     name: 'email-item',
@@ -7,7 +8,12 @@
     data () {
       return {}
     },
-    computed: {},
+    computed: {
+      dataHora () {
+        moment.locale('pt-br')
+        return moment(this.mail.data).format('L LTS')
+      }
+    },
     mounted () {
     },
     destroyed () {
@@ -25,13 +31,14 @@
     <u-item-main>
       <div class="pull-right text-sm text-muted">
         <!--span class="hidden-xs ">{{ mail.data.date | moment }}</span-->
-        <span class="hidden-xs">{{ mail.data.date }}</span>
+        <span class="hidden-xs">{{ dataHora }}</span>
         <!--i class="fa fa-paperclip m-l-sm"></i-->
       </div>
       <div class="clear">
         <div>
           <router-link :to="{ name:'view-email', params: { id: mail.id } }" class="text-md text-color" :class="{ 'not-read': !mail.lido }" >{{ mail.assunto }}</router-link>
           <span class="tag bg-grey-3 m-l-sm" v-if="mail.tag.name !== 'none'">{{mail.tag.name}}</span>
+          <u-icon name="star" icon-type="fa" color="yellow" v-if="mail.estrela"></u-icon>
         </div>
         <div class="text-ellipsis m-t-xs" style="color: #58666e">{{ mail.mensagem }}</div>
       </div>

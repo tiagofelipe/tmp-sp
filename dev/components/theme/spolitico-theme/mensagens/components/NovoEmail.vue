@@ -62,8 +62,8 @@
     <!-- header -->
     <div class="wrapper lter b-b">
       <u-btn-group class="m-r-sm">
-        <u-btn color="white"><i class=" fa fa-file"></i></u-btn>
-        <u-btn @click="$router.push({ name: 'contatos' })" color="white"><i class="fa fa-trash"></i></u-btn>
+        <u-btn icon="file" icon-type="fa" size="sm"></u-btn>
+        <u-btn icon="trash" icon-type="fa" size="sm" @click="$router.push({ name: 'contatos' })"></u-btn>
       </u-btn-group>
     </div>
     <span class="msg" v-if="confirmMsg">Mensagem enviada</span>
@@ -130,7 +130,7 @@
         </div>
         <div class="form-group">
           <div class="col-lg-8 col-lg-offset-2">
-            <button class="btn btn-info w-xs" @click="sendNewEmail()" :disabled="(isLoading && !hasError) || !isValid">{{ isLoading && !hasError ? 'Enviando...' : 'Enviar' }}</button>
+            <u-btn class="w-xs m-t" color="primary" @click="sendNewEmail()" :disabled="(isLoading && !hasError) || !isValid">{{ isLoading && !hasError ? 'Enviando...' : 'Enviar' }}</u-btn>
           </div>
         </div>
       </form>
@@ -152,8 +152,5 @@
     padding: 5px 15px;
     display: block;
     text-align: center;
-  }
-  i {
-    color: black;
   }
 </style>
