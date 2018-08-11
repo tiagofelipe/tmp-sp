@@ -38,7 +38,7 @@
 						<router-link to="ocorrencia/cadastrar" class="btn btn-sm bg-red text-white" style="font-size: 12px">Novo Atendimento</router-link>
 					</div>
 					<div class="col-md-1 offset-md-5">
-						<button class="btn btn-sm bg-grey-1 text-black no-select m-l box-shadow no-radius"><i class="fas fa-sync-alt"></i></button>
+						<button class="btn btn-sm bg-grey-1 text-muted no-select m-l box-shadow no-radius"><i class="fas fa-sync-alt"></i></button>
 					</div>
 				</div>
 			</div><!-- Fim Header App -->
@@ -158,7 +158,7 @@
 		display: block;
 		border-radius: 4px;
 		color: #58666e;
-		padding: 6px 12px;
+		padding: 7px 12px;
 		font-size: 13px;
 	}
 	.contApp .leftApp .bodyApp .listFiltros li a:hover{
