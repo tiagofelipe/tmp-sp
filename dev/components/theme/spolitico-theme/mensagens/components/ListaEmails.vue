@@ -84,7 +84,43 @@
       selected: function (a) {
         this.listatmp = a === 'lidos' ? this.lidos : a === 'naolidos' ? this.naolidos : this.todos
       },
-      filtro: function (f) {
+      filtro: function (f) { this.filtrar(f) }
+    },
+    beforeMount () {
+      this.getEmails()
+    },
+    destroyed () {
+    },
+    methods: {
+      getEmails () {
+        this.isLoading = true
+        setTimeout(() => {
+          this.lista = listMails
+          if (this.$route.query.filter) {
+            this.filtrar(this.$route.query.filter)
+          } else {
+            this.listatmp = this.lista
+          }
+          this.isLoading = false
+        }, 500)
+        /* ContatoService.getEmails()
+          .then(result => {
+            this.lista = Array.isArray(result.data) ? result.data : [result.data]
+            this.listatmp = this.lista
+            this.isLoading = false
+          })
+          .catch(error => {
+            this.isLoading = false
+            console.log(error.response.data.errors)
+          }) */
+      },
+      refresh () {
+        this.isLoading = true
+        this.lista = []
+        this.selected = null
+        this.getEmails()
+      },
+      filtrar (f) {
         if (f === 'lixeira') {
           this.listatmp = this.excluidos
         } else if (f === 'estrela') {
@@ -104,36 +140,6 @@
         } else if (f === 'pesquisas') {
           this.listatmp = this.pesquisas
         }
-      }
-    },
-    beforeMount () {
-      this.getEmails()
-    },
-    destroyed () {
-    },
-    methods: {
-      getEmails () {
-        this.isLoading = true
-        setTimeout(() => {
-          this.listatmp = this.lista = listMails
-          this.isLoading = false
-        }, 500)
-        /* ContatoService.getEmails()
-          .then(result => {
-            this.lista = Array.isArray(result.data) ? result.data : [result.data]
-            this.listatmp = this.lista
-            this.isLoading = false
-          })
-          .catch(error => {
-            this.isLoading = false
-            console.log(error.response.data.errors)
-          }) */
-      },
-      refresh () {
-        this.isLoading = true
-        this.lista = []
-        this.selected = null
-        this.getEmails()
       }
     },
     components: {UBtnGroup, USelect, ItemEmail }
