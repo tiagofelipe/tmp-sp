@@ -21,7 +21,7 @@
     },
     mounted() {
     console.log(pesquisa.eleitores)
-    const element = document.getElementById(this.mapName)
+    const element = this.$el.querySelector('.google-map')
     const options = {
         zoom: 14,
         center: new google.maps.LatLng(-15.148481940078748,-42.87161350250244)
@@ -92,9 +92,6 @@
     }
     }
 </script>
-
-<google-map name="example">
-</google-map>
 
 <template>
     <div class="preencher">

@@ -5,7 +5,7 @@
   import listMails from '../mailFactory'
   import UBtnGroup from '../../../../../../src/components/button/UBtnGroup'
 
-  export default{
+  export default {
     name: 'lista-emails',
     data () {
       return {
@@ -14,10 +14,10 @@
         isLoading: false,
         selected: null,
         options: [
-          {value:null, label: 'Filtrar por'},
-          {value:'lidos', label: 'Lidos'},
-          {value:'naolidos', label: 'Não lidos'},
-          {value:'todos', label: 'Todos'}
+          {value: null, label: 'Filtrar por'},
+          {value: 'lidos', label: 'Lidos'},
+          {value: 'naolidos', label: 'Não lidos'},
+          {value: 'todos', label: 'Todos'}
         ]
       }
     },
@@ -111,7 +111,7 @@
         this.getEmails()
       }
     },
-    components: {UBtnGroup, USelect, ItemEmail }
+    components: {UBtnGroup, USelect, ItemEmail}
   }
 </script>
 
@@ -119,7 +119,7 @@
   <div class="col">
     <div>
       <!-- header -->
-      <div class="wrapper">
+      <div class="wrapper c-message-header-bg">
         <div class="row">
           <div class="col-md-4">
             <!--div class="btn-group dropdown">
@@ -132,15 +132,47 @@
                 <li><a>Starred</a></li>
               </ul>
             </div-->
-            <div class="flex">
-              <u-select style="width: 100px; margin-right: 5px;" class="" v-model="selected" :options="options"></u-select>
-              <u-btn class="" size="sm" color="primary" @click="refresh()" icon="refresh"></u-btn>
+            <div class="u-flex">
+              <div class="col-md-11">
+                <u-btn-dropdown
+                  color="white"
+                  text-color="black"
+                  label="Standard"
+                  no-caps
+                  size="md"
+                >
+                  <u-list link>
+                    <u-item v-for="n in 2" :key="`1.${n}`" v-close-overlay @click.native="showNotification">
+                      <u-item-side icon="folder" inverted color="primary"/>
+                      <u-item-main>
+                        <u-item-tile label>Photos</u-item-tile>
+                        <u-item-tile sublabel>February 22, 2016</u-item-tile>
+                      </u-item-main>
+                      <u-item-side right icon="info" color="amber"/>
+                    </u-item>
+                    <u-item-separator inset/>
+                    <u-list-header inset>Files</u-list-header>
+                    <u-item v-close-overlay @click.native="showNotification">
+                      <u-item-side icon="assignment" inverted color="secondary"/>
+                      <u-item-main>
+                        <u-item-tile label>Vacation</u-item-tile>
+                        <u-item-tile sublabel>February 22, 2016</u-item-tile>
+                      </u-item-main>
+                      <u-item-side right icon="info" color="amber"/>
+                    </u-item>
+                  </u-list>
+                </u-btn-dropdown>
+                <u-btn class="m-l-xs" size="md" color="white" text-color="black" @click="refresh()"
+                       icon="refresh"></u-btn>
+              </div>
             </div>
           </div>
-          <u-btn-group class="col-md-1 offset-md-7">
-            <u-btn color="primary" type="button" style="float: right;"><i class="fa fa-chevron-left"></i></u-btn>
-            <u-btn color="primary" type="button"><i class="fa fa-chevron-right"></i></u-btn>
-          </u-btn-group>
+          <div class="col-md-1 offset-md-7 flex justify-end">
+            <u-btn-group>
+              <u-btn color="white" text-color="black" type="button" icon="chevron-left" icon-type="fa"><!--<i class="fa fa-chevron-left"></i>--></u-btn>
+              <u-btn color="white" text-color="black" type="button" icon="chevron-right" icon-type="fa"><!--<i class="fa fa-chevron-right"></i>--></u-btn>
+            </u-btn-group>
+          </div>
         </div>
       </div>
       <!-- / header -->
@@ -157,11 +189,17 @@
   select:focus {
     background: none;
   }
+
   .msg {
     margin-left: 40%;
     margin-top: 50px;
   }
+
   .no-border {
     border: none !important;
+  }
+
+  .c-message-header-bg {
+    background: #edf1f2;
   }
 </style>

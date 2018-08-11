@@ -8,7 +8,6 @@ import { createRouter } from './router'
 import Uloc, * as UlocAll from 'uloc'
 import UlocTheme from 'uloc-src/themes/uloc-default'
 import store from './store'
-import { menu } from './components/theme/routes'
 import { createIcons } from './icons'
 
 Vue.use(Uloc, {
@@ -20,7 +19,7 @@ Vue.use(Uloc, {
 
 createIcons()
 
-Vue.prototype.$uloc.menu.set(menu)
+Vue.prototype.$uloc.menu.set(require('./menu.json'))
 
 Vue.use(UlocTheme, {store})
 

@@ -43,8 +43,7 @@
 </script>
 
 <template>
-  <u-page>
-    <div class="u-flex">
+  <u-page class="u-flex">
       <div class="">
         <div class="wrapper">
           <u-btn tag="u-btn" color="negative" @click.native="$router.push({name: 'novo-email'})">Escrever</u-btn>
@@ -105,7 +104,7 @@
           <div class="wrapper">
             <form name="label">
               <div class="input-group">
-                <u-input type="text" class="form-control input-sm" value="" placeholder="Novo Marcador"></u-input>
+                <u-input type="text" class="form-control input-sm" value="" inline placeholder="Novo Marcador"></u-input>
                 <span class="input-group-btn">
 	              <u-btn type="button" size="xs" color="primary">Adicionar</u-btn>
 	            </span>
@@ -117,7 +116,6 @@
       <div class="col">
         <router-view></router-view>
       </div>
-    </div>
   </u-page>
 </template>
 

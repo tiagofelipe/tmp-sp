@@ -1,28 +1,11 @@
 [
   {
-    "headerTitle": "Introduction"
-  },
-  {
-    "name": "Get Started",
-    "icon": {
-      "icon": "heart",
-      "type": "fa"
-    },
-    "href": "#/"
-  },
-  {
-    "headerTitle": "Style & Identity"
-  },
-  {
-    "name": "Color Palette",
+    "name": "Mensagens",
     "icon": {
       "icon": "style",
       "type": "material"
     },
-    "href": "#/showcase/style-and-identity/color-palette"
-  },
-  {
-    "headerTitle": "Components"
+    "href": "#/mensagens"
   },
   {
     "name": "UI Kits",
