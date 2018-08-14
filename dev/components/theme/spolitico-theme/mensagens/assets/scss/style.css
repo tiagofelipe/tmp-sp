@@ -10,3 +10,11 @@ body {
 .mail-toolbar {
   height: 60px;
 }
+
+.active-filter, .active-filter:hover {
+  background-color: #23b7e5;
+  color: #fff !important;
+}
+.no-border {
+  border: none !important;
+}

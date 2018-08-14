@@ -57,6 +57,26 @@
           return item.isExcluido === false
         })
       },
+      campanhas () {
+        return this.lista.filter(item => {
+          return item.tag.name === 'campanhas'
+        })
+      },
+      eleitores () {
+        return this.lista.filter(item => {
+          return item.tag.name === 'eleitores'
+        })
+      },
+      agentes () {
+        return this.lista.filter(item => {
+          return item.tag.name === 'agentes'
+        })
+      },
+      pesquisas () {
+        return this.lista.filter(item => {
+          return item.tag.name === 'pesquisas'
+        })
+      },
       filtro () {
         return this.$route.query.filter
       }
@@ -65,21 +85,7 @@
       selected: function (a) {
         this.listatmp = a === 'lidos' ? this.lidos : a === 'naolidos' ? this.naolidos : this.todos
       },
-      filtro: function (f) {
-        if (f === 'lixeira') {
-          this.listatmp = this.excluidos
-        } else if (f === 'estrela') {
-          this.listatmp = this.estrela
-        } else if (f === 'naorespondidos') {
-          this.listatmp = this.naorespondidos
-        } else if (f === 'respondidos') {
-          this.listatmp = this.respondidos
-        } else if (f === 'lixeira') {
-          this.listatmp = this.excluidos
-        } else if (f === 'todos') {
-          this.listatmp = this.todos
-        }
-      }
+      filtro: function (f) { this.filtrar(f) }
     },
     beforeMount () {
       this.getEmails()
@@ -90,7 +96,12 @@
       getEmails () {
         this.isLoading = true
         setTimeout(() => {
-          this.listatmp = this.lista = listMails
+          this.lista = listMails
+          if (this.$route.query.filter) {
+            this.filtrar(this.$route.query.filter)
+          } else {
+            this.listatmp = this.lista
+          }
           this.isLoading = false
         }, 500)
         /* ContatoService.getEmails()
@@ -109,6 +120,27 @@
         this.lista = []
         this.selected = null
         this.getEmails()
+      },
+      filtrar (f) {
+        if (f === 'lixeira') {
+          this.listatmp = this.excluidos
+        } else if (f === 'estrela') {
+          this.listatmp = this.estrela
+        } else if (f === 'naorespondidos') {
+          this.listatmp = this.naorespondidos
+        } else if (f === 'respondidos') {
+          this.listatmp = this.respondidos
+        } else if (f === 'todos') {
+          this.listatmp = this.todos
+        } else if (f === 'campanhas') {
+          this.listatmp = this.campanhas
+        } else if (f === 'eleitores') {
+          this.listatmp = this.eleitores
+        } else if (f === 'agentes') {
+          this.listatmp = this.agentes
+        } else if (f === 'pesquisas') {
+          this.listatmp = this.pesquisas
+        }
       }
     },
     components: {UBtnGroup, USelect, ItemEmail}
@@ -122,22 +154,12 @@
       <div class="wrapper c-message-header-bg">
         <div class="row">
           <div class="col-md-4">
-            <!--div class="btn-group dropdown">
-              <button class="btn btn-default btn-sm btn-bg dropdown-toggle" data-toggle="dropdown">
-                <span class="dropdown-label">Filter</span>
-                <span class="caret"></span>
-              </button>
-              <ul class="dropdown-menu text-left text-sm">
-                <li><a>Unread</a></li>
-                <li><a>Starred</a></li>
-              </ul>
-            </div-->
             <div class="u-flex">
               <div class="col-md-11">
                 <u-btn-dropdown
                   color="white"
                   text-color="black"
-                  label="Standard"
+                  label="Filtrar"
                   no-caps
                   size="md"
                 >

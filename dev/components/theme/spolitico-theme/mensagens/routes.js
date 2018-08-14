@@ -1,5 +1,5 @@
 import Main from './Main.vue'
-import Contatos from './components/Contatos.vue'
+import Contatos from './components/ContatosContainer.vue'
 import ListaEmails from './components/ListaEmails.vue'
 import NovoEmail from './components/NovoEmail.vue'
 import Email from './components/Email.vue'
