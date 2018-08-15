@@ -1,9 +1,7 @@
 <script>
   import ItemEmail from './EmailItem.vue'
-  import USelect from '../../../../../../src/components/select/USelect'
   // import ContatoService from '../../../../domain/contato/service/contato'
   import listMails from '../mailFactory'
-  import UBtnGroup from '../../../../../../src/components/button/UBtnGroup'
 
   export default {
     name: 'lista-emails',
@@ -14,10 +12,8 @@
         isLoading: false,
         selected: null,
         options: [
-          {value: null, label: 'Filtrar por'},
-          {value: 'lidos', label: 'Lidos'},
-          {value: 'naolidos', label: 'Não lidos'},
-          {value: 'todos', label: 'Todos'}
+          {filter: 'estrela', name: 'Com Estrela'},
+          {filter: 'naolidos', name: 'Não lidos'}
         ]
       }
     },
@@ -121,29 +117,14 @@
         this.selected = null
         this.getEmails()
       },
-      filtrar (f) {
-        if (f === 'lixeira') {
-          this.listatmp = this.excluidos
-        } else if (f === 'estrela') {
-          this.listatmp = this.estrela
-        } else if (f === 'naorespondidos') {
-          this.listatmp = this.naorespondidos
-        } else if (f === 'respondidos') {
-          this.listatmp = this.respondidos
-        } else if (f === 'todos') {
-          this.listatmp = this.todos
-        } else if (f === 'campanhas') {
-          this.listatmp = this.campanhas
-        } else if (f === 'eleitores') {
-          this.listatmp = this.eleitores
-        } else if (f === 'agentes') {
-          this.listatmp = this.agentes
-        } else if (f === 'pesquisas') {
-          this.listatmp = this.pesquisas
-        }
+      filtrar (f) { // TODO: Verificar melhor forma; isso somente funciona com certeza para este caso
+
+        const keyFilter = (key) => this[key]
+
+        this.listatmp = f === 'lixeira' ? this.excluidos : keyFilter(f)
       }
     },
-    components: {UBtnGroup, USelect, ItemEmail}
+    components: {ItemEmail}
   }
 </script>
 
@@ -164,23 +145,10 @@
                   size="md"
                 >
                   <u-list link>
-                    <u-item v-for="n in 2" :key="`1.${n}`" v-close-overlay @click.native="showNotification">
-                      <u-item-side icon="folder" inverted color="primary"/>
+                    <u-item v-for="option in options" :key="option.filter" v-close-overlay @click.native="$router.push({ name: 'mensagens', query: { filter: option.filter } })">
                       <u-item-main>
-                        <u-item-tile label>Photos</u-item-tile>
-                        <u-item-tile sublabel>February 22, 2016</u-item-tile>
+                        <u-item-tile>{{ option.name}}</u-item-tile>
                       </u-item-main>
-                      <u-item-side right icon="info" color="amber"/>
-                    </u-item>
-                    <u-item-separator inset/>
-                    <u-list-header inset>Files</u-list-header>
-                    <u-item v-close-overlay @click.native="showNotification">
-                      <u-item-side icon="assignment" inverted color="secondary"/>
-                      <u-item-main>
-                        <u-item-tile label>Vacation</u-item-tile>
-                        <u-item-tile sublabel>February 22, 2016</u-item-tile>
-                      </u-item-main>
-                      <u-item-side right icon="info" color="amber"/>
                     </u-item>
                   </u-list>
                 </u-btn-dropdown>
