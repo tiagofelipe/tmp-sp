@@ -18,5 +18,5 @@
             <router-view></router-view>
 </template>
 
-<style src="../mensagens/assets/scss/style.css">
+<style>
 </style>
