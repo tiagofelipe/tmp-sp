@@ -1,10 +1,11 @@
 <script>
     import UAlert from "../../../../../../src/components/alert/UAlert"
     import pesquisa from "../../api/pesquisa_eleicoes_map.json"
+    import Box from "../components/Box"
     const VOTO_CONQUISTADO = 0, INDECISO =1, NAO_RESPONDIDO=2, PERDIDO=3
     export default {
     name: "tempoReal",
-    components: {UAlert},
+    components: {UAlert, Box},
     props: ['name'],
     data: function () {
     return {
@@ -20,7 +21,6 @@
       },
     },
     mounted() {
-    console.log(pesquisa.eleitores)
     const element = this.$el.querySelector('.google-map')
     const options = {
         zoom: 14,
@@ -29,58 +29,24 @@
     const map = new google.maps.Map(element, options);
 
     for(let pesq of pesquisa.eleitores){
-      let status = ''
-      switch (pesq.voto.status){
-        case VOTO_CONQUISTADO:
-          status = '<button  class="btn btn-primary btn-xs"> <i class="fa fa-thumbs-up m-r-sm"></i><strong> Voto Conquistado  </strong></button>'
-          break;
-        case INDECISO:
-          status = '<button class="btn btn-info btn-xs"> <i class="fa fa-frown m-r-sm"></i><strong> Indeciso  </strong></button>'
-          break;
-        case NAO_RESPONDIDO:
-          status = '<button class="btn btn-warning btn-xs"> <i class="fa fa-thumbs-down m-r-sm"></i><strong> Não quis responder </strong></button>'
-          break;
-        case PERDIDO:
-          status = '<button class="btn btn-danger btn-xs"> <i class="fa fa-thumbs-down m-r-sm"></i><strong> Voto Perdido </strong></button>'
-          break;
-      }
-      if(!pesq.pessoa.thumb){pesq.pessoa.thumb = 'img/pessoa.png'}
-      let html = '' +
-        '<div class="myInfoWindow">' +
-        '    <div class="clearfix">' +
-        '    <a class="pull-left thumb-sm avatar b-3x m-r">' +
-        '    <img src="components/theme/spolitico-theme/pesquisas/assets/'+ pesq.pessoa.thumb +'" alt="...">' +
-        '    </a>' +
-        '    <span class="clear">' +
-        '    <span class="ng-binding">'+ pesq.pessoa.nome +'</span>' +
-        '    <div>' +
-            status +
-        '    </div>' +
-        '    </span>' +
-        '    </div>' +
-        '    <div class="m-t">' +
-        '    <small>'+pesq.pessoa.info+'</small>' +
-        '    </div> <br>' +
-        '    <ul class="list-group m-t no-border no-margin no-padder">' +
-        '    <a style="color: #555" href="">' +
-        '    <li class="list-group-item no-padder no-border">' +
-        '    <i class="fa fa-phone fa-fw m-r-xs"></i> Ligar para '+ pesq.pessoa.nome+
-        '    </li></a>' +
-        '    <a style="color: #555" href="">' +
-        '    <li class="list-group-item no-padder no-border">' +
-        '    <i class="fa fa-envelope fa-fw m-r-xs"></i> Enviar Email'+
-        '    </li></a>' +
-        '    <a style="color: #555" href="">' +
-        '    <li class="list-group-item no-padder no-border">' +
-        '    <i class="fab fa-whatsapp fa-fw m-r-xs" aria-hidden="true"></i> Enviar SMS/WhatsApp' +
-        '    </li>' +
-        '    </a>' +
-        '    </ul>' +
-        '    <div class="m-t">' +
-        '    <a href="/#/pesquisas/pesquisa/resposta/'+ pesq.pessoa.id +'" class="btn btn-default btn-xs btn-dark m-t-xs"><i class="fa fa-eye m-r-sm"></i> Visualizar</a>' +
-        '    </div>' +
-        '</div>'
+        let status = ''
+        switch (pesq.voto.status){
+            case VOTO_CONQUISTADO:
+                status = '<button  class="btn btn-primary btn-xs"> <i class="fa fa-thumbs-up m-r-sm"></i><strong> Voto Conquistado  </strong></button>'
+                break;
+            case INDECISO:
+                status = '<button class="btn btn-info btn-xs"> <i class="fa fa-frown m-r-sm"></i><strong> Indeciso  </strong></button>'
+                break;
+            case NAO_RESPONDIDO:
+                status = '<button class="btn btn-warning btn-xs"> <i class="fa fa-thumbs-down m-r-sm"></i><strong> Não quis responder </strong></button>'
+                break;
+            case PERDIDO:
+                status = '<button class="btn btn-danger btn-xs"> <i class="fa fa-thumbs-down m-r-sm"></i><strong> Voto Perdido </strong></button>'
+                break;
+        }
+        if(!pesq.pessoa.thumb){pesq.pessoa.thumb = 'img/pessoa.png'}
         let icone = 'components/theme/spolitico-theme/pesquisas/assets/i'+  pesq.voto.status+'.png'
+        let html = Box.mounted(pesq, status)
         var marker = new google.maps.Marker({
         map: map,
         position: new google.maps.LatLng(pesq.lat,pesq.lng),
@@ -139,9 +105,8 @@
 <style scoped>
 
     .google-map {
-
     width: auto;
-    min-height: 700px;
+    min-height: 500px;
     height: 100%;
     margin: 0 auto;
     background: gray;
@@ -161,15 +126,6 @@
     background-color: rgb(229, 227, 223);
     }
 
-    .legend{
-   /* min-height: 56px;
-    position: absolute;
-    bottom: 0px;
-    position:absolute;
-    bottom:0px;
-    top: 0px;
-    min-height: 558px;*/
-    }
     .altura{
     max-height: 68px;
     }

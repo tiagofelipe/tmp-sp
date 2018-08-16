@@ -8,6 +8,28 @@
     "href": "#/mensagens"
   },
   {
+    "name": "Pesquisas",
+
+    "submenu": [
+      {
+        "name": "Pesquisa",
+        "icon": {
+          "icon": "box",
+          "type": "fa"
+        },
+        "href": "#/pesquisas/"
+      },
+      {
+        "name": "Tempo Real",
+        "icon": {
+          "icon": "map",
+          "type": "material"
+        },
+      "href": "#/pesquisas/mapa"
+      }
+    ]
+  },
+  {
     "name": "UI Kits",
     "icon": {
       "icon": "uikit",

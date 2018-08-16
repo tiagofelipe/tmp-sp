@@ -21,21 +21,46 @@
 
 <template>
     <!-- esse código está no em header.vue caso queira adaptar -->
+    <div class="row">
+        <div class="col">
     <div style="margin: 12px">
         <div class="bg-white b-b wrapper-md">
             <div class="row">
                 <div class="col-md-3 col-sm-6 col-xs-7">
-                    <div class="m-t-sm">Administração de Contatos</div>
+                    <div class="m-t-sm">Pesquisas ativas</div>
                 </div>
                 <div class="col-md-9 col-sm-6 col-xs-5">
 
                 </div>
             </div>
         </div>
-        <u-alert color="dark">
-            Some cool message
+        <u-alert color="dark" class="">
+            <h3>Período Eleitoral</h3>
+            Para facilitar, durante as eleições esta pesquisa fixa estará ativa, as questões da pesquisa são básicas e necessárias para qualquer campanha, porém é possível customizá-la como quiser.
         </u-alert>
 
+    </div>
+        </div>
+        <div class="col-3 bg-dark">
+            <u-chat-message
+                    label='Sunday, 19th'
+            />
+
+            <u-chat-message
+                    name="me"
+                    avatar="/components/theme/spolitico-theme/pesquisas/assets/img/edson.jpg"
+                    :text="['hunter2']"
+                    stamp="4 minutes ago"
+                    sent
+            />
+            <u-chat-message
+                    name="me"
+                    avatar="/components/theme/spolitico-theme/pesquisas/assets/img/edson.jpg"
+                    :text="['hunter2']"
+                    stamp="4 minutes ago"
+                    sent
+            />
+        </div>
     </div>
 
 </template>
