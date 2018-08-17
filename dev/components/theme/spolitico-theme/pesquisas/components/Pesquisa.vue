@@ -41,7 +41,7 @@
 
     </div>
         </div>
-        <div class="col-3 bg-dark">
+        <div class="col-3">
             <u-chat-message
                     label='Sunday, 19th'
             />
@@ -49,15 +49,15 @@
             <u-chat-message
                     name="me"
                     avatar="/components/theme/spolitico-theme/pesquisas/assets/img/edson.jpg"
-                    :text="['hunter2']"
+                    :text="['Olá, quantas respostas já tivemos nas pesquisas']"
                     stamp="4 minutes ago"
                     sent
             />
             <u-chat-message
-                    name="me"
-                    avatar="/components/theme/spolitico-theme/pesquisas/assets/img/edson.jpg"
-                    :text="['hunter2']"
-                    stamp="4 minutes ago"
+                    name="him"
+                    avatar="/components/theme/spolitico-theme/pesquisas/assets/img/pessoa.png"
+                    :text="['Já entrevistamos 800 pessoas']"
+                    stamp="4 min"
                     sent
             />
         </div>
@@ -68,47 +68,5 @@
 
 <style scoped>
 
-    .google-map {
 
-    width: auto;
-    min-height: 700px;
-    height: 100%;
-    margin: 0 auto;
-    background: gray;
-    }
-    .foot{
-    bottom: 0;
-    left: 0;
-    position: fixed;
-    width: 100%;
-    }
-    .preencher{
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    background-color: rgb(229, 227, 223);
-    }
-
-    .altura{
-    max-height: 68px;
-    }
-    .mapLegend{
-
-    top: 10%;
-    right: 20px;
-    position: absolute;
-    top:80px;
-    color: #98a6ad;
-    }
-
-    .w-xxl {
-    width: 360px;
-    }
-    .panel-head {
-    border-radius: 2px 2px 0 0;
-    padding: 15px;
-    margin-bottom: 15px;
-    }
 </style>

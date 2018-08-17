@@ -3,9 +3,26 @@
 </template>
 
 <script>
+    const VOTO_CONQUISTADO = 0, INDECISO =1, NAO_RESPONDIDO=2, PERDIDO=3
     export default {
         name: "box",
-        mounted(pesq, status){
+        mounted(pesq){
+            let status = ''
+            switch (pesq.voto.status){
+                case VOTO_CONQUISTADO:
+                    status = '<button  class="btn btn-primary btn-xs"> <i class="fa fa-thumbs-up m-r-sm"></i><strong> Voto Conquistado  </strong></button>'
+                    break;
+                case INDECISO:
+                    status = '<button class="btn btn-info btn-xs"> <i class="fa fa-frown m-r-sm"></i><strong> Indeciso  </strong></button>'
+                    break;
+                case NAO_RESPONDIDO:
+                    status = '<button class="btn btn-warning btn-xs"> <i class="fa fa-thumbs-down m-r-sm"></i><strong> Não quis responder </strong></button>'
+                    break;
+                case PERDIDO:
+                    status = '<button class="btn btn-danger btn-xs"> <i class="fa fa-thumbs-down m-r-sm"></i><strong> Voto Perdido </strong></button>'
+                    break;
+            }
+            if(!pesq.pessoa.thumb){pesq.pessoa.thumb = 'img/pessoa.png'}
             let html = '' +
                 '<div class="myInfoWindow">' +
                 '    <div class="clearfix">' +
@@ -41,7 +58,7 @@
                 '    <a href="/#/pesquisas/pesquisa/resposta/'+ pesq.pessoa.id +'" class="btn btn-default btn-xs btn-dark m-t-xs"><i class="fa fa-eye m-r-sm"></i> Visualizar</a>' +
                 '    </div>' +
                 '</div>'
-            return html
+            return (html)
         }
     }
 </script>
